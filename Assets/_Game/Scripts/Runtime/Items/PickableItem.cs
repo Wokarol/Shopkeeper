@@ -29,7 +29,7 @@ namespace Shopkeeper
             pickedItem.gameObject.AddComponent<CanvasGroup>().blocksRaycasts = false;
 
             RectTransform rt = (RectTransform)pickedItem.transform;
-            rt.parent = transform.root;
+            rt.SetParent(transform.root);
             rt.localScale = Vector3.one;
             rt.sizeDelta = Vector2.one * 100;
             rt.position = transform.position;
