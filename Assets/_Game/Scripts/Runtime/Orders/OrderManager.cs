@@ -16,6 +16,7 @@ namespace Shopkeeper
         [SerializeField] float spacing = 260;
         [Space]
         [SerializeField] float flyInDistance = 500;
+        [SerializeField] Ease flyInEase = Ease.OutCubic;
 
         private List<OrderCardUI> createdOrders = new List<OrderCardUI>();
 
@@ -36,7 +37,9 @@ namespace Shopkeeper
             Vector2 finalPos = new Vector2(-paddingRight, -(paddingTop + spacing * createdOrders.Count));
 
             rtransform.anchoredPosition = finalPos;
-            rtransform.DOAnchorPosX(finalPos.x + flyInDistance, 0.5f).From();
+            rtransform.DOAnchorPosX(finalPos.x + flyInDistance, 0.5f)
+                .From()
+                .SetEase(flyInEase);
 
             createdOrders.Add(card);
         }

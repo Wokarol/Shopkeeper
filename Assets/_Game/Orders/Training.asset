@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04520277284f76a419fc137744fac356, type: 3}
   m_Name: Training
   m_EditorClassIdentifier: 
-  description: I just need sword sword, flail and axe, I will use them for training
+  description: I just need bronze sword, flail and axe, I will use them for training
   items:
   - Item: {fileID: 11400000, guid: 41bf7860aa03cae4ab54ca710357c0cc, type: 2}
     Amount: 1
