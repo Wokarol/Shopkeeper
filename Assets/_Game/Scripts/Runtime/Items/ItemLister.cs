@@ -3,11 +3,16 @@ using UnityEngine;
 
 namespace Shopkeeper
 {
+    [SelectionBase]
     public class ItemLister : MonoBehaviour
     {
+        [SerializeField] private ListedItem listedItemPrefab;
+
         internal void Add(ItemStack stack)
         {
-            throw new NotImplementedException();
+            var listedItem = Instantiate(listedItemPrefab, transform);
+            stack.Amount = 0;
+            listedItem.Set(stack);
         }
     }
 }
