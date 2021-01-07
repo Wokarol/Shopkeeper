@@ -3654,13 +3654,13 @@ MonoBehaviour:
   RightAlignButtons: 0
   InputContrast: 0
   InputAlpha: 0.5
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  BackgroundColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   ForegroundColor: {r: 1, g: 1, b: 1, a: 1}
   ShellColor: {r: 1, g: 1, b: 1, a: 1}
   InputColor: {r: 0, g: 1, b: 1, a: 1}
   WarningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   ErrorColor: {r: 1, g: 0, b: 0, a: 1}
-  assemblyLoadingBehavior: 0
+  assemblyLoadingBehavior: 1
   customAdditionalAssembliesToLoad:
   - Shopkeeper.Runtime
 --- !u!4 &1201943449
