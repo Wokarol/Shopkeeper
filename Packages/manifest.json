@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.jimmycushnie.command-terminal-plus": "https://github.com/nothke/Command-Terminal-Plus.git",
+    "com.jimmycushnie.command-terminal-plus": "https://github.com/Wokarol/Command-Terminal-Plus.git",
     "com.unity.2d.animation": "5.0.3",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.0.2",
