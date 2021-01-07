@@ -16,30 +16,46 @@ namespace Shopkeeper.Terminal
             Debug.Log(string.Join("  /  ", names));
         }
 
-        public static void AddItemImplementation(string itemName)
+        public static void AddItemImplementation(string itemName, int count)
         {
             var container = Object.FindObjectOfType<ItemContainer>();
             Item item = ItemDatabase.LoadFromResources().Get(itemName);
-
-            container.Add(item);
+            
+            for (int i = 0; i < count; i++)
+            {
+                container.Add(item); 
+            }
         }
 
 
-        [RegisterCommand(Name = "add_item", MinArgCount = 1, MaxArgCount = 1, Help = "Adds item to item container")]
+        [RegisterCommand(Name = "add_item", MinArgCount = 1, MaxArgCount = 2, Help = "Adds item to item container")]
         public static void AddItem(CommandArg[] args)
         {
             string itemName = args[0].String;
+            int itemCount = 1;
+
+            if (args.Length >= 2)
+            {
+                itemCount = args[1].Int;
+            }
 
             if (CommandTerminalPlus.Terminal.IssuedError) return;
 
             try
             {
-                AddItemImplementation(itemName);
+                AddItemImplementation(itemName, itemCount);
             }
             catch (System.Exception e)
             {
                 Debug.LogException(e);
             }
+        }
+
+        [RegisterCommand(Name = "clear_container", MaxArgCount = 0, Help = "Clears item container")]
+        public static void ClearContainer(CommandArg[] args)
+        {
+            var container = Object.FindObjectOfType<ItemContainer>();
+            container.Clear();
         }
     }
 }

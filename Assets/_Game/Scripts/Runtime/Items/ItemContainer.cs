@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -40,6 +41,17 @@ namespace Shopkeeper
         {
             items.Add(item);
             SpawnItemElement(item, 0);
+        }
+
+        public void Clear()
+        {
+            items.Clear();
+            foreach (Transform child in transform)
+            {
+                child.DOScale(0, 0.3f)
+                    .SetEase(Ease.InBack)
+                    .OnComplete(() => Destroy(child.gameObject));
+            }
         }
     }
 }
