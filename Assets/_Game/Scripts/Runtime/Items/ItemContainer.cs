@@ -24,12 +24,22 @@ namespace Shopkeeper
                 int y = i / columnCount;
 
                 int dist = x + y;
-
-                PickableItem image = Instantiate(itemPrefab, transform);
-                image.Init(item);
-
-                image.transform.DOScale(Vector3.zero, 0.5f).From().SetDelay(dist * 0.1f).SetEase(Ease.OutBack);
+                SpawnItemElement(item, dist * 0.1f);
             }
+        }
+
+        private void SpawnItemElement(Item item, float delay)
+        {
+            PickableItem image = Instantiate(itemPrefab, transform);
+            image.Init(item);
+
+            image.transform.DOScale(Vector3.zero, 0.5f).From().SetDelay(delay).SetEase(Ease.OutBack);
+        }
+
+        public void Add(Item item)
+        {
+            items.Add(item);
+            SpawnItemElement(item, 0);
         }
     }
 }

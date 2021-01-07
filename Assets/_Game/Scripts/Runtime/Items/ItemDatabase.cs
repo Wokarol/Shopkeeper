@@ -17,6 +17,8 @@ namespace Shopkeeper
         private Dictionary<string, Item> nameToItemMap = new Dictionary<string, Item>();
         private bool isDirty;
 
+        public IReadOnlyList<Item> Items => items;
+
         private void OnValidate()
         {
             isDirty = true;
@@ -50,7 +52,7 @@ namespace Shopkeeper
         [ContextMenu("Add all items with label \"Item\"")]
         private void AddAllByLabel()
         {
-            var itemsToLoad = AssetDatabase.FindAssets("l:Item")
+            IEnumerable<Item> itemsToLoad = AssetDatabase.FindAssets("l:Item")
                 .Select(p => AssetDatabase.LoadAssetAtPath<Item>(AssetDatabase.GUIDToAssetPath(p)));
             foreach (var item in itemsToLoad)
             {
@@ -64,7 +66,13 @@ namespace Shopkeeper
 
         public static ItemDatabase LoadFromResources()
         {
-            ItemDatabase database = Resources.FindObjectsOfTypeAll<ItemDatabase>()[0];
+            ItemDatabase[] databasesFound = Resources.FindObjectsOfTypeAll<ItemDatabase>();
+            if(databasesFound.Length == 0)
+            {
+                throw new System.Exception("There is no Item Database to load");
+            }
+
+            ItemDatabase database = databasesFound[0];
             return database;
         }
     }
