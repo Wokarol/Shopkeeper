@@ -66,7 +66,7 @@ namespace Shopkeeper
 
         public static ItemDatabase LoadFromResources()
         {
-            ItemDatabase[] databasesFound = Resources.FindObjectsOfTypeAll<ItemDatabase>();
+            ItemDatabase[] databasesFound = Resources.LoadAll<ItemDatabase>("");
             if(databasesFound.Length == 0)
             {
                 throw new System.Exception("There is no Item Database to load");
