@@ -15,7 +15,7 @@ namespace Shopkeeper
         public List<Item> items;
 
         private Dictionary<string, Item> nameToItemMap = new Dictionary<string, Item>();
-        private bool isDirty;
+        private bool isDirty = true;
 
         public IReadOnlyList<Item> Items => items;
 
