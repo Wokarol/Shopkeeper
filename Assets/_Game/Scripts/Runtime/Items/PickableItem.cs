@@ -51,7 +51,7 @@ namespace Shopkeeper
             RectTransform rt = (RectTransform)pickedItem.transform;
             Vector3 animationTarget = Vector3.zero;
 
-            if(TryGetTarget(eventData, rt, out IDragAndDropTarget target))
+            if(TryGetAcceptableTarget(eventData, rt, out IDragAndDropTarget target))
             {
                 target.GetTargetPosition(item, out Vector3 position, out Vector2 size);
                 DropOnto(rt, position, 0.2f, size, () =>
@@ -81,7 +81,7 @@ namespace Shopkeeper
                 });
         }
 
-        private bool TryGetTarget(PointerEventData eventData, RectTransform rt, out IDragAndDropTarget target)
+        private bool TryGetAcceptableTarget(PointerEventData eventData, RectTransform rt, out IDragAndDropTarget target)
         {
             if (pickedItem.canvas.TryGetComponent(out GraphicRaycaster caster))
             {
@@ -96,7 +96,8 @@ namespace Shopkeeper
                 {
                     if (result.gameObject.TryGetComponent(out target))
                     {
-                        return true;
+                        if(target.Accepts(item))
+                            return true;
                     }
                 }
             }

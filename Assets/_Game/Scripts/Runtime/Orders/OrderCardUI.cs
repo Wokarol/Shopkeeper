@@ -17,6 +17,8 @@ namespace Shopkeeper
         {
             description.text = order.Description;
             order.FillLister(itemLister);
+            itemLister.AcceptsCheck = order.IsItemAccepted;
+            itemLister.IndexOfItemGetter = order.GetFirstFittingItemIndex;
         }
     }
 }

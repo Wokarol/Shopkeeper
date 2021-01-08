@@ -19,5 +19,30 @@ namespace Shopkeeper
                 itemLister.Add(stack);
             }
         }
+
+        public override int GetFirstFittingItemIndex(Item item)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if(items[i].Item == item)
+                {
+                    return i;
+                }
+            }
+
+            throw new System.Exception("No slot fits the item, that shouldn't happen");
+        }
+
+        public override bool IsItemAccepted(Item item)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].Item == item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

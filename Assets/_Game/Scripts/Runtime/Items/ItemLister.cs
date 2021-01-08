@@ -11,6 +11,10 @@ namespace Shopkeeper
 
         private List<ListedItem> createdItems = new List<ListedItem>();
 
+        public Predicate<Item> AcceptsCheck;
+        //public Action<Item> OnDropped;
+        public Func<Item, int> IndexOfItemGetter;
+
         internal void Add(ItemStack stack)
         {
             ListedItem listedItem = Instantiate(listedItemPrefab, transform);
@@ -20,12 +24,12 @@ namespace Shopkeeper
             createdItems.Add(listedItem);
         }
 
-        public bool Accepts(Item item) => true;
+        public bool Accepts(Item item) => AcceptsCheck?.Invoke(item) ?? true;
 
-        public void Dropped(Item item)
+        public void Dropped(Item item)// => OnDropped?.Invoke(item);
         {
-            ListedItem listedItem = createdItems[0];
-            
+            ListedItem listedItem = createdItems[IndexOfItemGetter?.Invoke(item) ?? 0];
+
             ItemStack stack = listedItem.Stack;
             stack.Amount += 1;
 
@@ -34,7 +38,7 @@ namespace Shopkeeper
 
         public void GetTargetPosition(Item item, out Vector3 position, out Vector2 size)
         {
-            ListedItem listedItem = createdItems[0];
+            ListedItem listedItem = createdItems[IndexOfItemGetter?.Invoke(item) ?? 0];
             listedItem.GetIconPlacing(out position, out size);
         }
     }
