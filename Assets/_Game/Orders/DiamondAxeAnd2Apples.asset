@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04520277284f76a419fc137744fac356, type: 3}
   m_Name: DiamondAxeAnd2Apples
   m_EditorClassIdentifier: 
-  description: Hey buddy, I need one diamond axe and an two apples, I will grow trees
+  description: Hey buddy, I need one diamond axe and two apples, I will grow trees
     and stuff
   items:
   - Item: {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}

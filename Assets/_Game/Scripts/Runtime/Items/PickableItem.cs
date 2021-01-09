@@ -14,9 +14,11 @@ namespace Shopkeeper
         [SerializeField] private Material dragMaterial = null;
 
         private Image pickedItem;
+        private Item item;
 
         public void Init(Item item)
         {
+            this.item = item;
             image.sprite = item.Sprite;
         }
 
@@ -29,7 +31,7 @@ namespace Shopkeeper
             pickedItem.gameObject.AddComponent<CanvasGroup>().blocksRaycasts = false;
 
             RectTransform rt = (RectTransform)pickedItem.transform;
-            rt.SetParent(transform.root);
+            rt.SetParent(image.canvas.transform);
             rt.localScale = Vector3.one;
             rt.sizeDelta = Vector2.one * 100;
             rt.position = transform.position;
@@ -47,16 +49,61 @@ namespace Shopkeeper
         public void OnEndDrag(PointerEventData eventData)
         {
             RectTransform rt = (RectTransform)pickedItem.transform;
-            rt.DOScale(1f, 0.2f);
-            rt.DOMove(transform.position, 0.2f).SetEase(Ease.InOutCirc)
+            Vector3 animationTarget = Vector3.zero;
+
+            if(TryGetAcceptableTarget(eventData, rt, out IDragAndDropTarget target))
+            {
+                target.GetTargetPosition(item, out Vector3 position, out Vector2 size);
+                DropOnto(rt, position, 0.2f, size, () =>
+                    {
+                        target.Dropped(item);
+                        Destroy(gameObject);
+                    });
+            }
+            else
+            {
+                DropOnto(rt, transform.position, 0.2f, Vector2.one * 100);
+            }
+
+        }
+
+        private void DropOnto(RectTransform rt, Vector3 targetPosition, float duration, Vector2 sizeDelta, Action onFinished = null)
+        {
+            rt.DOSizeDelta(sizeDelta, duration);
+            rt.DOScale(1f, duration);
+            rt.DOMove(targetPosition, duration).SetEase(Ease.InOutCirc)
                 .OnComplete(() =>
                 {
                     image.material = image.defaultMaterial;
                     image.color = new Color(1, 1, 1, 1);
                     Destroy(pickedItem.gameObject);
+                    onFinished?.Invoke();
                 });
+        }
 
+        private bool TryGetAcceptableTarget(PointerEventData eventData, RectTransform rt, out IDragAndDropTarget target)
+        {
+            if (pickedItem.canvas.TryGetComponent(out GraphicRaycaster caster))
+            {
+                List<RaycastResult> results = new List<RaycastResult>();
+                PointerEventData pointerData = new PointerEventData(EventSystem.current)
+                {
+                    position = eventData.position
+                };
 
+                caster.Raycast(pointerData, results);
+                foreach (var result in results)
+                {
+                    if (result.gameObject.TryGetComponent(out target))
+                    {
+                        if(target.Accepts(item))
+                            return true;
+                    }
+                }
+            }
+
+            target = null;
+            return false;
         }
     }
 }
