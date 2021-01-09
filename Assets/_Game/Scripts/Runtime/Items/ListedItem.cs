@@ -6,6 +6,19 @@ using UnityEngine.UI;
 
 namespace Shopkeeper
 {
+    [System.Serializable]
+    public struct VisibleItemStack
+    {
+        public Item Item;
+        public int Amount;
+
+        public VisibleItemStack(Item item, int amount)
+        {
+            Item = item;
+            Amount = amount;
+        }
+    }
+
     public class ListedItem : MonoBehaviour
     {
         [SerializeField] private Image icon;
@@ -16,9 +29,9 @@ namespace Shopkeeper
 
         [SerializeField] private Material emptyMaterial = null;
         [SerializeField] private Color emptyColor = Color.black;
-        public ItemStack Stack { get; private set; }
+        public VisibleItemStack Stack { get; private set; }
 
-        public void Set(ItemStack stack)
+        public void Set(VisibleItemStack stack)
         {
             Stack = stack;
             icon.sprite = stack.Item.Sprite;

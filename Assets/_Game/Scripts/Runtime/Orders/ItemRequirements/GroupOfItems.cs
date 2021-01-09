@@ -1,16 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Shopkeeper
 {
     [System.Serializable]
-    public class ExactItem : ItemRequirement
+    public class GroupOfItems : ItemRequirement
     {
-        [Header("Exact Item")]
-        public Item Item;
+        [Header("Group of Items")]
+        public ItemGroup Group;
 
         public override void AddItem(ListedItem listedItem, Item item)
         {
             var current = listedItem.Stack;
+            current.Item = item;
             current.Amount += 1;
             listedItem.Set(current);
         }
@@ -22,12 +24,12 @@ namespace Shopkeeper
 
         public override void InitializeListedItem(ListedItem listedItem)
         {
-            listedItem.Set(new VisibleItemStack(Item, 0));
+            listedItem.Set(new VisibleItemStack(Group.Items[0], 0));
         }
 
         public override bool IsItemAccepted(ListedItem listedItem, Item item)
         {
-            return item == Item;
+            return Group.Items.Contains(item);
         }
     }
 }

@@ -47,5 +47,10 @@ namespace Shopkeeper
         {
             items.Add(new ExactItem());
         }
+        [ContextMenu("Add group")]
+        public void AddGroupofItems()
+        {
+            items.Add(new GroupOfItems());
+        }
     }
 }
