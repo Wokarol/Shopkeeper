@@ -6,13 +6,46 @@ using UnityEngine;
 
 namespace Shopkeeper
 {
-    public abstract class Order : ScriptableObject
+    [CreateAssetMenu]
+    public class Order : ScriptableObject
     {
-        public abstract string Description { get; }
-        public abstract void FillLister(ItemLister itemLister);
+        [SerializeField, TextArea(3, 20)] private string description = "";
+        [Space]
+        [SerializeReference] List<ItemRequirement> items = new List<ItemRequirement>();
 
-        public abstract bool IsItemAccepted(Item obj);
+        public string Description => description;
+        public void FillLister(ItemLister itemLister)
+        {
+            itemLister.Init(items.Count);
 
-        public abstract int GetFirstFittingItemIndex(Item arg);
+            for (int i = 0; i < items.Count; i++)
+            {
+                items[i].InitializeListedItem(itemLister[i]);
+            }
+        }
+
+        public bool FindMatchingItem(ItemLister itemLister, Item item, out int itemRequirementIndex, out int indexOfItemInRequirement, out Action onAdded)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].IsItemAccepted(itemLister[i], item))
+                {
+                    itemRequirementIndex = i;
+                    indexOfItemInRequirement = items[i].GetIndexOnItemListedItemForAnimation(itemLister[i], item);
+                    onAdded = () => items[i].AddItem(itemLister[i], item);
+                    return true;
+                }
+            }
+            itemRequirementIndex = 0;
+            indexOfItemInRequirement = 0;
+            onAdded = null;
+            return false;
+        }
+
+        [ContextMenu("Add exact")]
+        public void AddExactItem()
+        {
+            items.Add(new ExactItem());
+        }
     }
 }

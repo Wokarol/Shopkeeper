@@ -29,8 +29,9 @@ namespace Shopkeeper
             icon.color = empty ? emptyColor : normalColor;
         }
 
-        internal void GetIconPlacing(out Vector3 position, out Vector2 size)
+        internal void GetIconPlacing(int index, out Vector2 position, out Vector2 size)
         {
+            // TODO: Implement inner index
             position = posTarget.position;
             size = Vector2.one * 85;
         }

@@ -7,6 +7,12 @@ namespace Shopkeeper
     {
         public Item Item;
         public int Amount;
+
+        public ItemStack(Item item, int amount)
+        {
+            Item = item;
+            Amount = amount;
+        }
     }
 
     [CreateAssetMenu(menuName = "Item")]
