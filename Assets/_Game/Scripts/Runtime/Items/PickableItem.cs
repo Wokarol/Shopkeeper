@@ -56,7 +56,6 @@ namespace Shopkeeper
                 DropOnto(rt, dropTarget.Position, 0.2f, dropTarget.Size, () =>
                     {
                         dropTarget.OnDropped?.Invoke();
-                        Debug.Log("Dropped item");
                         Destroy(gameObject);
                     });
             }
