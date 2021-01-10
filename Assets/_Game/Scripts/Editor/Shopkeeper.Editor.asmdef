@@ -1,0 +1,16 @@
+{
+    "name": "Shopkeeper.Editor",
+    "rootNamespace": "Shopkeeper.Editor",
+    "references": [
+        "GUID:f8fb072db11d7d3409e0c87d3f0becf5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
