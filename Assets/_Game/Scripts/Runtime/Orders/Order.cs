@@ -11,7 +11,7 @@ namespace Shopkeeper
     {
         [SerializeField, TextArea(3, 20)] private string description = "";
         [Space]
-        [SerializeReference] List<ItemRequirement> items = new List<ItemRequirement>();
+        [SerializeReference, SubclassSelector(typeof(ItemRequirement))] List<ItemRequirement> items = new List<ItemRequirement>();
 
         public string Description => description;
         public void FillLister(ItemLister itemLister)
@@ -40,17 +40,6 @@ namespace Shopkeeper
             indexOfItemInRequirement = 0;
             onAdded = null;
             return false;
-        }
-
-        [ContextMenu("Add exact")]
-        public void AddExactItem()
-        {
-            items.Add(new ExactItem());
-        }
-        [ContextMenu("Add group")]
-        public void AddGroupofItems()
-        {
-            items.Add(new GroupOfItems());
         }
     }
 }

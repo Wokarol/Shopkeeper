@@ -5,8 +5,8 @@ namespace Shopkeeper
     [System.Serializable]
     public class ExactItem : ItemRequirement
     {
-        [Header("Exact Item")]
         public Item Item;
+        public int Amount;
 
         public override void AddItem(ListedItem listedItem, Item item)
         {

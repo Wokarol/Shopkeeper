@@ -21,3 +21,4 @@ MonoBehaviour:
       type: {class: GroupOfItems, ns: Shopkeeper, asm: Shopkeeper.Runtime}
       data:
         Group: {fileID: 11400000, guid: 3e7f52a64319ed94f8fabe7170a89d2b, type: 2}
+        Amount: 1

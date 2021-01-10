@@ -7,8 +7,8 @@ namespace Shopkeeper
     [System.Serializable]
     public class GroupOfItems : ItemRequirement
     {
-        [Header("Group of Items")]
         public ItemGroup Group;
+        public int Amount;
 
         public override void AddItem(ListedItem listedItem, Item item)
         {
