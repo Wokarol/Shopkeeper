@@ -18,7 +18,7 @@ namespace Shopkeeper.Crafting
 
         private readonly List<CraftingSlot> slots = new List<CraftingSlot>();
 
-        private IEnumerator Start()
+        private void Start()
         {
             VerticalLayoutGroup layout = GetComponent<VerticalLayoutGroup>();
 
@@ -27,11 +27,8 @@ namespace Shopkeeper.Crafting
                 SpawnSlot();
             }
 
-            Vector3 oldPos = layout.transform.position;
-            layout.transform.position = Vector2.one * -4000;
-            yield return null;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
             layout.enabled = false;
-            layout.transform.position = oldPos;
 
             for (int i = 0; i < slotAmount; i++)
             {
