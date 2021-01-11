@@ -7,5 +7,6 @@
         public abstract void InitializeListedItem(ListedItem listedItem);
         public abstract void AddItem(ListedItem listedItem, Item item);
         public abstract int GetIndexOnItemListedItemForAnimation(ListedItem listedItem, Item item);
+        public abstract bool IsFullfilled(ListedItem listedItem);
     }
 }

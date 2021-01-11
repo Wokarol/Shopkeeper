@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,10 +11,48 @@ namespace Shopkeeper
     public class OrderCardUI : MonoBehaviour
     {
         [SerializeField] private TMPro.TextMeshProUGUI description;
+        [SerializeField] private ItemLister itemLister;
+        [Space]
         [SerializeField] private Button confirmButton;
         [SerializeField] private Button cancelButton;
-        [SerializeField] private ItemLister itemLister;
+        [Space]
+        [SerializeField] private CanvasGroup correctPanel;
+        [SerializeField] private CanvasGroup wrongPanel;
+
         private Order order;
+        public event Action OnOrderFinished;
+
+        private void Start()
+        {
+            correctPanel.gameObject.SetActive(false);
+            wrongPanel.gameObject.SetActive(false);
+
+            confirmButton.onClick.AddListener(FinisheOrder);
+            cancelButton.onClick.AddListener(() => Debug.Log("Canceled"));
+        }
+
+        private void FinisheOrder()
+        {
+            if(order.IsFullfilled(itemLister))
+            {
+                ShowResult(correctPanel);
+            }
+            else
+            {
+                ShowResult(wrongPanel);
+            }
+        }
+
+        private void ShowResult(CanvasGroup correctPanel)
+        {
+            correctPanel.gameObject.SetActive(true);
+
+            correctPanel
+                .DOFade(0, 0.2f)
+                .From()
+                .SetEase(Ease.InOutCubic)
+                .OnComplete(() => OnOrderFinished?.Invoke());
+        }
 
         public void Init(Order order)
         {

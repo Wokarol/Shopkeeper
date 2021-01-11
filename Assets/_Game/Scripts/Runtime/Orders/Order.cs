@@ -41,5 +41,18 @@ namespace Shopkeeper
             onAdded = null;
             return false;
         }
+
+        public bool IsFullfilled(ItemLister itemLister)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if(!items[i].IsFullfilled(itemLister[i]))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

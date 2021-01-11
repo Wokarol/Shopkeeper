@@ -19,12 +19,14 @@ public class CursorImage : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+        Cursor.visible = false;
+
         transform.position = Input.mousePosition + (Vector3)offset;
 
         if (Input.GetMouseButtonDown(0))
-            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, 30), duration).SetEase(Ease.OutCubic);
+            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, 10), duration).SetEase(Ease.OutCubic);
         if (Input.GetMouseButtonUp(0))
-            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, -30), duration).SetEase(Ease.InCubic);
+            transform.DOBlendableLocalRotateBy(new Vector3(0, 0, -10), duration).SetEase(Ease.InCubic);
     }
 
     private void OnDestroy()

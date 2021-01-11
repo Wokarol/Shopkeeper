@@ -5751,12 +5751,16 @@ MonoBehaviour:
   orders:
   - {fileID: 11400000, guid: ccf04cb8f8b7ecc4dbf409f698c63879, type: 2}
   - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
+  - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
+  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
   paddingRight: 5
   paddingTop: 5
   spacing: 260
   flyInDistance: 500
   flyInDuration: 0.5
   flyInEase: 27
+  flyOutDuration: 0.5
+  flyOutEase: 26
 --- !u!1 &1678498342
 GameObject:
   m_ObjectHideFlags: 0

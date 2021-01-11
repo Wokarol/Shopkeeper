@@ -12,6 +12,8 @@ namespace Shopkeeper
         public List<Item> Items;
         public int Amount;
 
+        public Item Item => Items[0];
+
         public VisibleItemStack(Item item, int amount)
         {
             Items = new List<Item> { item };

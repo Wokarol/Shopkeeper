@@ -47,6 +47,12 @@ namespace Shopkeeper
             listedItem.Set(new VisibleItemStack(Group.Items[0], 0));
         }
 
+        public override bool IsFullfilled(ListedItem listedItem)
+        {
+            VisibleItemStack stack = listedItem.Stack;
+            return stack.Amount >= Amount;
+        }
+
         public override bool IsItemAccepted(ListedItem listedItem, Item item)
         {
             return Group.Items.Contains(item);

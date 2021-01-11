@@ -18,6 +18,9 @@ namespace Shopkeeper
         [SerializeField] float flyInDistance = 500;
         [SerializeField] float flyInDuration = 0.5f;
         [SerializeField] Ease flyInEase = Ease.OutCubic;
+        [Space]
+        [SerializeField] float flyOutDuration = 0.5f;
+        [SerializeField] Ease flyOutEase = Ease.InBack;
 
         private List<OrderCardUI> createdOrders = new List<OrderCardUI>();
 
@@ -43,6 +46,33 @@ namespace Shopkeeper
                 .SetEase(flyInEase);
 
             createdOrders.Add(card);
+
+            card.OnOrderFinished += () => RemoveOrder(createdOrders.IndexOf(card));
+        }
+
+        private void RemoveOrder(int index)
+        {
+            RectTransform rt = createdOrders[index].transform as RectTransform;
+
+            Sequence seq = DOTween.Sequence();
+
+            seq.Append(rt.DOAnchorPosX(rt.anchoredPosition.x + flyInDistance, flyOutDuration)
+                .SetEase(flyOutEase));
+
+            for (int i = index + 1; i < createdOrders.Count; i++)
+            {
+                RectTransform ort = createdOrders[i].transform as RectTransform;
+
+                seq.Insert(flyOutDuration + (i - index) * 0.05f, 
+                    ort.DOAnchorPosY(ort.anchoredPosition.y + spacing, 0.3f)
+                        .SetEase(Ease.InBack, 1.05f));
+            }
+
+            seq.OnComplete(() =>
+            {
+                Destroy(rt.gameObject);
+                createdOrders.RemoveAt(index);
+            });
         }
     }
 }
