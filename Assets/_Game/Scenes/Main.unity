@@ -1105,6 +1105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftingSlotPrefab: {fileID: 8230105673530062683, guid: 75dbcff97d895bb4294cfb5b494d9228, type: 3}
   slotAmount: 4
+  showInterval: 0.1
+  showDurationPerElement: 0.6
+  showEase: 9
 --- !u!1 &1530505092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1741679638
 MonoBehaviour:
   m_ObjectHideFlags: 0
