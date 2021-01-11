@@ -7,39 +7,38 @@ namespace Shopkeeper
     [SelectionBase]
     public class ItemLister : MonoBehaviour, IDragAndDropTarget
     {
+        public delegate bool AcceptCheckWithTargetItem(Item item, out int listedItem, out int indexOfItemInsideListedItem, out Action onDropped);
+
         [SerializeField] private ListedItem listedItemPrefab;
 
-        private List<ListedItem> createdItems = new List<ListedItem>();
+        private readonly List<ListedItem> createdItems = new List<ListedItem>();
 
-        public Predicate<Item> AcceptsCheck;
-        //public Action<Item> OnDropped;
-        public Func<Item, int> IndexOfItemGetter;
+        public AcceptCheckWithTargetItem FindDropTargetImplementation;
 
-        internal void Add(ItemStack stack)
+        public ListedItem this[int i] => createdItems[i];
+
+        public void Init(int numberOfItems)
         {
-            ListedItem listedItem = Instantiate(listedItemPrefab, transform);
-            stack.Amount = 0;
-            listedItem.Set(stack);
-
-            createdItems.Add(listedItem);
+            for (int i = 0; i < numberOfItems; i++)
+            {
+                ListedItem listedItem = Instantiate(listedItemPrefab, transform);
+                createdItems.Add(listedItem);
+            }
         }
 
-        public bool Accepts(Item item) => AcceptsCheck?.Invoke(item) ?? true;
-
-        public void Dropped(Item item)// => OnDropped?.Invoke(item);
+        public bool FindDropTarget(Item item, out Vector2 position, out Vector2 size, out Action onDropped)
         {
-            ListedItem listedItem = createdItems[IndexOfItemGetter?.Invoke(item) ?? 0];
-
-            ItemStack stack = listedItem.Stack;
-            stack.Amount += 1;
-
-            listedItem.Set(stack);
-        }
-
-        public void GetTargetPosition(Item item, out Vector3 position, out Vector2 size)
-        {
-            ListedItem listedItem = createdItems[IndexOfItemGetter?.Invoke(item) ?? 0];
-            listedItem.GetIconPlacing(out position, out size);
+            if (FindDropTargetImplementation(item, out int listedItem, out int indexOfItemInsideListedItem, out onDropped))
+            {
+                createdItems[listedItem].GetIconPlacing(indexOfItemInsideListedItem, out position, out size);
+                return true;
+            }
+            else
+            {
+                position = Vector2.zero;
+                size = Vector2.zero;
+                return false;
+            }
         }
     }
 }

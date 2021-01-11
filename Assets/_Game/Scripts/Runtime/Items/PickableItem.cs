@@ -51,13 +51,19 @@ namespace Shopkeeper
             RectTransform rt = (RectTransform)pickedItem.transform;
             Vector3 animationTarget = Vector3.zero;
 
-            if(TryGetAcceptableTarget(eventData, rt, out IDragAndDropTarget target))
+            if(TryGetAcceptableTarget(eventData, rt, out DropTarget dropTarget))
             {
-                target.GetTargetPosition(item, out Vector3 position, out Vector2 size);
-                DropOnto(rt, position, 0.2f, size, () =>
+                DropOnto(rt, dropTarget.Position, 0.2f, dropTarget.Size, () =>
                     {
-                        target.Dropped(item);
-                        Destroy(gameObject);
+                        try
+                        {
+                            dropTarget.OnDropped?.Invoke();
+                            Destroy(gameObject);
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.LogException(e);
+                        }
                     });
             }
             else
@@ -81,7 +87,7 @@ namespace Shopkeeper
                 });
         }
 
-        private bool TryGetAcceptableTarget(PointerEventData eventData, RectTransform rt, out IDragAndDropTarget target)
+        private bool TryGetAcceptableTarget(PointerEventData eventData, RectTransform rt, out DropTarget dropTarget)
         {
             if (pickedItem.canvas.TryGetComponent(out GraphicRaycaster caster))
             {
@@ -94,16 +100,36 @@ namespace Shopkeeper
                 caster.Raycast(pointerData, results);
                 foreach (var result in results)
                 {
-                    if (result.gameObject.TryGetComponent(out target))
+                    if (result.gameObject.TryGetComponent(out IDragAndDropTarget target))
                     {
-                        if(target.Accepts(item))
+                        // Item is over IDragAndDropTarget
+                        if(target.FindDropTarget(item, out Vector2 pos, out Vector2 size, out Action onDropped))
+                        {
+                            dropTarget = new DropTarget(target, pos, size, onDropped);
                             return true;
+                        }
                     }
                 }
             }
 
-            target = null;
+            dropTarget = new DropTarget();
             return false;
+        }
+
+        struct DropTarget
+        {
+            public IDragAndDropTarget Target;
+            public Vector2 Position;
+            public Vector2 Size;
+            public Action OnDropped;
+
+            public DropTarget(IDragAndDropTarget target, Vector2 position, Vector2 size, Action onDropped)
+            {
+                Target = target;
+                Position = position;
+                Size = size;
+                OnDropped = onDropped;
+            }
         }
     }
 }

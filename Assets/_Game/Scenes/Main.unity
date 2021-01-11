@@ -5425,27 +5425,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 5634037477332215835, guid: 83e5eb8ddbef974429e567b5cab8193c, type: 3}
   items:
-  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
+  - {fileID: 11400000, guid: 45a7a018360e7064dbd4e328976ac057, type: 2}
   - {fileID: 11400000, guid: 41bf7860aa03cae4ab54ca710357c0cc, type: 2}
-  - {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
-  - {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
-  - {fileID: 11400000, guid: f853bc9769202844db7957248fb76c30, type: 2}
   - {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}
-  - {fileID: 11400000, guid: e8a682bda7189e142bff0049389e8752, type: 2}
   - {fileID: 11400000, guid: 490d440503bdc1141be0c3b975ee12d8, type: 2}
-  - {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
-  - {fileID: 11400000, guid: f853bc9769202844db7957248fb76c30, type: 2}
-  - {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}
-  - {fileID: 11400000, guid: f853bc9769202844db7957248fb76c30, type: 2}
-  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
   - {fileID: 11400000, guid: 41bf7860aa03cae4ab54ca710357c0cc, type: 2}
-  - {fileID: 11400000, guid: e8a682bda7189e142bff0049389e8752, type: 2}
-  - {fileID: 11400000, guid: e8a682bda7189e142bff0049389e8752, type: 2}
+  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
+  - {fileID: 11400000, guid: f853bc9769202844db7957248fb76c30, type: 2}
+  - {fileID: 11400000, guid: 66201742ce49e834486f2e791d42a900, type: 2}
+  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
+  - {fileID: 11400000, guid: a5572aaac3709fe4bb13cd0d96b1ed06, type: 2}
   - {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}
   - {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
   - {fileID: 11400000, guid: 490d440503bdc1141be0c3b975ee12d8, type: 2}
-  - {fileID: 11400000, guid: f853bc9769202844db7957248fb76c30, type: 2}
+  - {fileID: 11400000, guid: 490d440503bdc1141be0c3b975ee12d8, type: 2}
+  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
+  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
   - {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}
+  - {fileID: 11400000, guid: 66201742ce49e834486f2e791d42a900, type: 2}
+  - {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
   columnCount: 6
 --- !u!1 &1629147768
 GameObject:
@@ -5751,15 +5749,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderCard: {fileID: 6107562813051249225, guid: d49c0b17ddb543b40a3aedc8e64d13c9, type: 3}
   orders:
-  - {fileID: 11400000, guid: d030cfcfa79640340be583b715b86654, type: 2}
-  - {fileID: 11400000, guid: 7c6dc8c1ec615c34faaf975cd4413d2d, type: 2}
-  - {fileID: 11400000, guid: a7976003ab8eb8844a3383da142bc63e, type: 2}
+  - {fileID: 11400000, guid: ccf04cb8f8b7ecc4dbf409f698c63879, type: 2}
+  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
+  - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
+  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
   paddingRight: 5
   paddingTop: 5
   spacing: 260
   flyInDistance: 500
   flyInDuration: 0.5
   flyInEase: 27
+  flyOutDuration: 0.5
+  flyOutEase: 26
 --- !u!1 &1678498342
 GameObject:
   m_ObjectHideFlags: 0
