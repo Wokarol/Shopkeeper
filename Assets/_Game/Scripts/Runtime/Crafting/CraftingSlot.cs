@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Shopkeeper.Crafting
 {
@@ -8,11 +9,21 @@ namespace Shopkeeper.Crafting
     {
         [SerializeField] private GameObject activePanel;
         [SerializeField] private GameObject inactivePanel;
+        [Space]
+        [SerializeField] private Button startCrafting;
 
         private void Start()
         {
             activePanel.SetActive(false);
             inactivePanel.SetActive(true);
+
+            startCrafting.onClick.AddListener(StartCrafting);
+        }
+
+        private void StartCrafting()
+        {
+            activePanel.SetActive(true);
+            inactivePanel.SetActive(false);
         }
     }
 }

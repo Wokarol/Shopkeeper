@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activePanel: {fileID: 8048706289564963703}
   inactivePanel: {fileID: 8048706287501868334}
+  startCrafting: {fileID: 8048706288934742841}
 --- !u!1 &8048706288488586098
 GameObject:
   m_ObjectHideFlags: 0
