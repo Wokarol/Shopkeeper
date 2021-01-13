@@ -94,8 +94,12 @@ namespace Shopkeeper
 
         internal void GetIconPlacing(int index, out Vector2 position, out Vector2 size)
         {
-            position = icons[index].RectTransform.position;
-            size = Vector2.one * 85;
+            RectTransform rt = icons[index].RectTransform;
+            RectTransform rootCanvas = icons[index].Icon.canvas.transform as RectTransform;
+            Bounds b = RectTransformUtility.CalculateRelativeRectTransformBounds(rootCanvas, rt);
+
+            position = b.center;
+            size = b.size;
         }
 
         struct DisplayedIcon
