@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: -4}
 --- !u!114 &551136969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: -4}
 --- !u!114 &631764827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: -4}
 --- !u!114 &1041001198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7007,7 +7007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: -4}
 --- !u!114 &2036268638
 MonoBehaviour:
   m_ObjectHideFlags: 0

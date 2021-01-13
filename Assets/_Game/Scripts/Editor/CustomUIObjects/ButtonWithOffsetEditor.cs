@@ -8,7 +8,7 @@ using UnityEditor;
 
 namespace Shopkeeper.Editor
 {
-    [CustomEditor(typeof(ButtonWithOffset))]
+    [CustomEditor(typeof(ButtonWithOffset)), CanEditMultipleObjects]
     public class ButtonWithOffsetEditor : ButtonEditor
     {
         public override void OnInspectorGUI()
@@ -24,3 +24,4 @@ namespace Shopkeeper.Editor
         }
     }
 }
+
