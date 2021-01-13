@@ -38,8 +38,11 @@ namespace Shopkeeper
 
             RectTransform rt = (RectTransform)pickedItem.transform;
             rt.SetParent(image.canvas.transform);
+
+            Bounds b = GetImageBounds();
+
             rt.localScale = Vector3.one;
-            rt.sizeDelta = Vector2.one * 100;
+            rt.sizeDelta = b.size;
             rt.position = transform.position;
             pickedItem.sprite = image.sprite;
 
@@ -57,7 +60,7 @@ namespace Shopkeeper
             RectTransform rt = (RectTransform)pickedItem.transform;
             Vector3 animationTarget = Vector3.zero;
 
-            if (TryGetAcceptableTarget(eventData, rt, out DropTarget dropTarget))
+            if (TryGetAcceptableTarget(eventData, out DropTarget dropTarget))
             {
                 DropOnto(rt, dropTarget.Position, 0.2f, dropTarget.Size, () =>
                     {
@@ -67,8 +70,18 @@ namespace Shopkeeper
             }
             else
             {
-                DropOnto(rt, transform.position, 0.2f, Vector2.one * 100);
+                Bounds b = GetImageBounds();
+
+                DropOnto(rt, b.center, 0.2f, b.size);
             }
+        }
+
+        private Bounds GetImageBounds()
+        {
+            RectTransform myTransform = image.transform as RectTransform;
+            RectTransform rootCanvas = image.canvas.transform as RectTransform;
+            Bounds b = RectTransformUtility.CalculateRelativeRectTransformBounds(rootCanvas, myTransform);
+            return b;
         }
 
         private void DropOnto(RectTransform rt, Vector3 targetPosition, float duration, Vector2 sizeDelta, Action onFinished = null)
@@ -77,7 +90,7 @@ namespace Shopkeeper
 
             rt.DOSizeDelta(sizeDelta, duration);
             rt.DOScale(1f, duration);
-            rt.DOMove(targetPosition, duration).SetEase(Ease.InOutCirc)
+            rt.DOLocalMove(targetPosition, duration).SetEase(Ease.InOutCirc)
                 .OnComplete(() =>
                 {
                     image.material = image.defaultMaterial;
@@ -88,7 +101,7 @@ namespace Shopkeeper
                 .SetId("Returning Tween");
         }
 
-        private bool TryGetAcceptableTarget(PointerEventData eventData, RectTransform rt, out DropTarget dropTarget)
+        private bool TryGetAcceptableTarget(PointerEventData eventData, out DropTarget dropTarget)
         {
             if (pickedItem.canvas.TryGetComponent(out GraphicRaycaster caster))
             {
