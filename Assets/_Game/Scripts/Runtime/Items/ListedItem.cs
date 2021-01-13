@@ -23,7 +23,7 @@ namespace Shopkeeper
 
     public class ListedItem : MonoBehaviour
     {
-        [Header("Icon, should have disabled shadow and child marking centre")]
+        [Header("Icon, should have disabled shadow")]
         [SerializeField] private Image icon;
         [SerializeField] private float spacing;
         [Header("Text")]
@@ -94,21 +94,23 @@ namespace Shopkeeper
 
         internal void GetIconPlacing(int index, out Vector2 position, out Vector2 size)
         {
-            position = icons[index].PosTarget.position;
-            size = Vector2.one * 85;
+            RectTransform rt = icons[index].RectTransform;
+            RectTransform rootCanvas = icons[index].Icon.canvas.transform as RectTransform;
+            Bounds b = RectTransformUtility.CalculateRelativeRectTransformBounds(rootCanvas, rt);
+
+            position = b.center;
+            size = b.size;
         }
 
         struct DisplayedIcon
         {
             public Image Icon;
-            public RectTransform PosTarget;
             public Shadow Shadow;
             public RectTransform RectTransform;
 
             public DisplayedIcon(Image icon)
             {
                 Icon = icon;
-                PosTarget = icon.transform.GetChild(0) as RectTransform;
                 Shadow = icon.GetComponent<Shadow>();
                 RectTransform = icon.transform as RectTransform;
             }
