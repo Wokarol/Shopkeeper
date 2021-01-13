@@ -10,14 +10,16 @@ namespace Shopkeeper
         [SerializeField] private Vector2 offset = Vector2.zero;
         private SelectionState oldState;
 
+#if UNITY_EDITOR
         protected override void OnValidate()
         {
             base.OnValidate();
-            if(transition != Transition.SpriteSwap)
+            if (transition != Transition.SpriteSwap)
             {
                 transition = Transition.SpriteSwap;
             }
-        }
+        } 
+#endif
 
         protected override void DoStateTransition(SelectionState state, bool instant)
         {
