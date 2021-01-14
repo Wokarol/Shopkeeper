@@ -4,15 +4,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Shopkeeper
+namespace Shopkeeper.Crafting
 {
     public class CraftingSelectorPanel : MonoBehaviour
     {
+        [SerializeField] private CraftingRecipeGroup receipes;
+
+        [Header("List")]
+        [SerializeField] private RectTransform listTranform;
+        [SerializeField] private CraftableItemUI craftableItemPrefab;
+        [Space]
         [SerializeField] private float panelPeekMargin = 40;
         private bool open;
 
         private RectTransform rectTransform;
         private Sequence openCloseSequence;
+
+        public event Action<CraftingRecipe> RecipeSelected;
 
         private void Awake()
         {
@@ -25,6 +33,18 @@ namespace Shopkeeper
             rectTransform.anchorMax = new Vector2(1, 0);
 
             rectTransform.anchoredPosition = new Vector2(0, panelPeekMargin);
+
+            SpawnRecepies();
+        }
+
+        private void SpawnRecepies()
+        {
+            foreach (var recepie in receipes.Receipes)
+            {
+                var ui = Instantiate(craftableItemPrefab, listTranform);
+                ui.Init(recepie);
+                ui.RecipeSelected += r => RecipeSelected?.Invoke(r);
+            }
         }
 
         private void Update()

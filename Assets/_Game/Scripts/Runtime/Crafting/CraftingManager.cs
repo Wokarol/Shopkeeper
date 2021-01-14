@@ -15,10 +15,21 @@ namespace Shopkeeper.Crafting
         [SerializeField] private float showInterval = 0.2f;
         [SerializeField] private float showDurationPerElement = 0.5f;
         [SerializeField] private Ease showEase = Ease.OutCubic;
+        [Header("Selecting")]
+        [SerializeField] private CraftingSelectorPanel selectorPanel;
 
         private readonly List<CraftingSlot> slots = new List<CraftingSlot>();
 
         private void Start()
+        {
+            InitializeSlots(slotAmount);
+            selectorPanel.RecipeSelected += r =>
+            {
+                Debug.Log($"Recipe \"{r.name}\" selected");
+            };
+        }
+
+        private void InitializeSlots(int slotAmount)
         {
             VerticalLayoutGroup layout = GetComponent<VerticalLayoutGroup>();
 
@@ -32,7 +43,7 @@ namespace Shopkeeper.Crafting
 
             for (int i = 0; i < slotAmount; i++)
             {
-                AnimateSlot(slots[i], i);
+                AnimateSlot(this.slots[i], i);
             }
         }
 
