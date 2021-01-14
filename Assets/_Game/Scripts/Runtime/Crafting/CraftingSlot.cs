@@ -21,12 +21,14 @@ namespace Shopkeeper.Crafting
             activePanel.SetActive(false);
             inactivePanel.SetActive(true);
 
-            startCrafting.onClick.AddListener(StartCraftingButton);
+            startCrafting.onClick.AddListener(SelectRecipe);
         }
 
-        private void StartCraftingButton()
+        private void SelectRecipe()
         {
             Manager.ShowSelectorFor(this);
         }
+
+
     }
 }
