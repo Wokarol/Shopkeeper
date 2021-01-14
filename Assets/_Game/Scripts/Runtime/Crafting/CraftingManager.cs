@@ -43,6 +43,27 @@ namespace Shopkeeper.Crafting
                 Debug.Log($"Recipe \"{recipe.name}\" selected");
             else
                 Debug.Log($"Recipe \"{recipe.name}\" will be started on \"{overrideNextSlot.name}\"");
+
+            CraftingSlot slot = null;
+            if(overrideNextSlot != null)
+            {
+                slot = overrideNextSlot;
+                overrideNextSlot = null;
+                selectorPanel.Hide();
+            }
+            else
+            {
+                foreach (var s in slots)
+                {
+                    if (!s.IsCrafting)
+                    {
+                        slot = s;
+                        break;
+                    }
+                }
+            }
+
+            slot.StartCrafting(recipe);
         }
 
         private void InitializeSlots(int slotAmount)

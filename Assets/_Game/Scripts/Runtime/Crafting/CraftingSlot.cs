@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,12 @@ namespace Shopkeeper.Crafting
             Manager.ShowSelectorFor(this);
         }
 
+        public void StartCrafting(CraftingRecipe recipe)
+        {
+            activePanel.SetActive(true);
+            inactivePanel.SetActive(false);
+            IsCrafting = true;
 
+        }
     }
 }
