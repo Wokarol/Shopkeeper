@@ -21,6 +21,7 @@ namespace Shopkeeper.Crafting
         private Sequence openCloseSequence;
 
         public event Action<CraftingRecipe> RecipeSelected;
+        public event Action<bool> Toggled;
 
         private void Awake()
         {
@@ -47,6 +48,7 @@ namespace Shopkeeper.Crafting
             }
         }
 
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.C))
@@ -55,9 +57,23 @@ namespace Shopkeeper.Crafting
             }
         }
 
-        private void Toggle()
+        public void Show()
+        {
+            if (!open)
+                Toggle();
+        }
+
+        public void Hide()
+        {
+            if (open)
+                Toggle();
+        }
+
+        public void Toggle()
         {
             open = !open;
+
+            Toggled?.Invoke(open);
 
             openCloseSequence.Kill();
 

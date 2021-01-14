@@ -12,18 +12,21 @@ namespace Shopkeeper.Crafting
         [Space]
         [SerializeField] private Button startCrafting;
 
+        public CraftingManager Manager;
+
+        public bool IsCrafting { get; set; } = false;
+
         private void Start()
         {
             activePanel.SetActive(false);
             inactivePanel.SetActive(true);
 
-            startCrafting.onClick.AddListener(StartCrafting);
+            startCrafting.onClick.AddListener(StartCraftingButton);
         }
 
-        private void StartCrafting()
+        private void StartCraftingButton()
         {
-            activePanel.SetActive(true);
-            inactivePanel.SetActive(false);
+            Manager.ShowSelectorFor(this);
         }
     }
 }
