@@ -9,6 +9,9 @@ namespace Shopkeeper.Crafting
     {
         [SerializeField] private List<CraftingIngredient> ingredients;
         [SerializeField] private Item result;
+
+        public IReadOnlyList<CraftingIngredient> Ingredients => ingredients;
+        public Item Result => result;
     }
 
     [System.Serializable]
