@@ -36,6 +36,9 @@ namespace Shopkeeper.Crafting
             inactivePanel.SetActive(false);
             IsCrafting = true;
 
+            Sequence seq = DOTween.Sequence();
+            seq.Append(transform.DOBlendableLocalMoveBy(Vector3.right * 50, 0.3f).SetEase(Ease.OutCubic));
+            seq.Append(transform.DOBlendableLocalMoveBy(Vector3.left * 50, 0.3f).SetEase(Ease.InOutCubic));
         }
     }
 }
