@@ -859,7 +859,7 @@ MonoBehaviour:
   ToggleHotkey: '`'
   ToggleFullHotkey: '#`'
   BufferSize: 512
-  ConsoleFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  ConsoleFont: {fileID: 12800000, guid: 2a0af318c5e96234cb5e8956266119a4, type: 3}
   ConsoleFontSize: 0
   InputCaret: '>'
   ShowGUIButtons: 0

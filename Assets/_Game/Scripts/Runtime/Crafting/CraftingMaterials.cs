@@ -8,6 +8,7 @@ namespace Shopkeeper.Crafting
         private Dictionary<Item, int> materials = new Dictionary<Item, int>();
 
         public event Action<Item, int> Changed;
+        public IEnumerable<KeyValuePair<Item, int>> AllValues => materials;
 
         public int this[Item item]
         {
