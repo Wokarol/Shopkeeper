@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Shopkeeper.World;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Shopkeeper.Crafting
         [SerializeField] private Ease showEase = Ease.OutCubic;
         [Header("Selecting")]
         [SerializeField] private CraftingSelectorPanel selectorPanel;
+        
         private readonly List<CraftingSlot> slots = new List<CraftingSlot>();
         private CraftingSlot overrideNextSlot;
 

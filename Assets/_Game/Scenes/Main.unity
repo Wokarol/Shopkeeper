@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listedItemPrefab: {fileID: 6425533688844414021, guid: 7ea572a95c412c744b081c40c288af14, type: 3}
-  craftingItems: {fileID: 11400000, guid: 6b641383df833984697f326fb8cca1c6, type: 2}
+  itemsToShow: {fileID: 11400000, guid: 6b641383df833984697f326fb8cca1c6, type: 2}
 --- !u!1 &1459221396
 GameObject:
   m_ObjectHideFlags: 0
