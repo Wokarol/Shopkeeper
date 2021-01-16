@@ -28,6 +28,8 @@ namespace Shopkeeper.Crafting
             inactivePanel.SetActive(true);
 
             startCrafting.onClick.AddListener(SelectRecipe);
+
+            input.Init(3);
         }
 
         private void SelectRecipe()
@@ -42,11 +44,15 @@ namespace Shopkeeper.Crafting
             IsCrafting = true;
 
             finalResult.sprite = recipe.Result.Sprite;
-            input.Init(recipe.Ingredients.Count);
             for (int i = 0; i < recipe.Ingredients.Count; i++)
             {
                 CraftingIngredient ingredient = recipe.Ingredients[i];
+                input[i].gameObject.SetActive(true);
                 input[i].Set(new VisibleItemStack(ingredient.Item, ingredient.Amount));
+            }
+            for (int i = recipe.Ingredients.Count; i < 3; i++)
+            {
+                input[i].gameObject.SetActive(false);
             }
 
             DOVirtual.Float(0, 1, 3, SetSliderValue)

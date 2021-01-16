@@ -19,12 +19,6 @@ namespace Shopkeeper
 
         public void Init(int numberOfItems)
         {
-            createdItems.Clear();
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
-            }
-
             for (int i = 0; i < numberOfItems; i++)
             {
                 ListedItem listedItem = Instantiate(listedItemPrefab, transform);
