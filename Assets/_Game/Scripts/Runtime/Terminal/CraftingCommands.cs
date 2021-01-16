@@ -1,5 +1,6 @@
 using CommandTerminalPlus;
 using Shopkeeper.World;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace Shopkeeper
 {
-    public static class PlayerStateCommands
+    public static class CraftingCommands
     {
         [RegisterCommand(Name = "show_crafting_materials", MaxArgCount = 1, Help = "Shows all craftable materials currently available, pass true to show empty elements")]
         public static void CurrentCraftingItemsCount(CommandArg[] args)
@@ -58,11 +59,23 @@ namespace Shopkeeper
 
             try
             {
-                AddItemImplementation(itemName, itemCount);
+                if (itemName.ToLower() == "all")
+                    AddAllItemsImplementation(itemCount);
+                else
+                    AddItemImplementation(itemName, itemCount);
             }
             catch (System.Exception e)
             {
                 Debug.LogException(e);
+            }
+        }
+
+        private static void AddAllItemsImplementation(int itemCount)
+        {
+            Crafting.CraftingMaterials materials = WorldContext.PlayerState.CraftingMaterials;
+            foreach (var item in materials.AllValues.Select(i => i.Key).ToList())
+            {
+                materials[item] += itemCount;
             }
         }
 
