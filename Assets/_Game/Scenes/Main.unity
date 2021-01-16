@@ -207,6 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 540464319}
+  - component: {fileID: 540464320}
   m_Layer: 5
   m_Name: Crafting Panel
   m_TagString: Untagged
@@ -237,6 +238,26 @@ RectTransform:
   m_AnchoredPosition: {x: -12.5, y: 0}
   m_SizeDelta: {x: -25, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &540464320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540464318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d82b58b3f0b70a46937c786c0d217b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warehouse: {fileID: 1598702284}
+  craftingSlotPrefab: {fileID: 8230105673530062683, guid: 75dbcff97d895bb4294cfb5b494d9228, type: 3}
+  slotAmount: 4
+  slotHolder: {fileID: 1493082782}
+  showInterval: 0.1
+  showDurationPerElement: 0.6
+  showEase: 15
+  selectorPanel: {fileID: 1061274826}
 --- !u!1 &546743357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1150,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1493082781}
   - component: {fileID: 1493082782}
-  - component: {fileID: 1493082783}
   m_Layer: 5
   m_Name: Crafting Slots
   m_TagString: Untagged
@@ -1182,24 +1202,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1493082783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493082780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d82b58b3f0b70a46937c786c0d217b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  craftingSlotPrefab: {fileID: 8230105673530062683, guid: 75dbcff97d895bb4294cfb5b494d9228, type: 3}
-  slotAmount: 4
-  showInterval: 0.1
-  showDurationPerElement: 0.6
-  showEase: 15
-  selectorPanel: {fileID: 1061274826}
 --- !u!1 &1530505092
 GameObject:
   m_ObjectHideFlags: 0

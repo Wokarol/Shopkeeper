@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -318,6 +318,9 @@ MonoBehaviour:
   activePanel: {fileID: 8048706289564963703}
   inactivePanel: {fileID: 8048706287501868334}
   startCrafting: {fileID: 8048706288934742841}
+  finalResult: {fileID: 8048706288020722100}
+  input: {fileID: 3953429360885500074}
+  slider: {fileID: 8048706288488586101}
 --- !u!1 &8048706288488586098
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a966c3401469740b8d502e30541116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listedItemPrefab: {fileID: 6425533688844414021, guid: 7eb04bc5b3ef9b84d88f06e003401ea5, type: 3}
+  listedItemPrefab: {fileID: 6425533688844414021, guid: 7ea572a95c412c744b081c40c288af14, type: 3}
 --- !u!114 &1793882770891038944
 MonoBehaviour:
   m_ObjectHideFlags: 0

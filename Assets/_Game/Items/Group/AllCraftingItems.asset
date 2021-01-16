@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AllCraftingItems
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: aadcdef0bff7a1e4480c3eafe7340706, type: 2}
   - {fileID: 11400000, guid: 23698288746d375438f4387a3982b234, type: 2}
   - {fileID: 11400000, guid: f6bced804b1d54b4e8e016905d841494, type: 2}
   - {fileID: 11400000, guid: 490b4f706a6612e46a35133723fbefb2, type: 2}

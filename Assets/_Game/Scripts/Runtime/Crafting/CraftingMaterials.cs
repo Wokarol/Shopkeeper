@@ -23,7 +23,7 @@ namespace Shopkeeper.Crafting
                 if (materials.ContainsKey(item))
                 {
                     materials[item] = value;
-                    Changed(item, value);
+                    Changed?.Invoke(item, value);
                 }
                 else
                 {
@@ -36,6 +36,27 @@ namespace Shopkeeper.Crafting
         {
             materials.Add(item, 0);
             Changed?.Invoke(item, 0);
+        }
+
+        internal bool Contains(IReadOnlyList<CraftingIngredient> ingredients)
+        {
+            foreach (var ingredient in ingredients)
+            {
+                if(this[ingredient.Item] < ingredient.Amount)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        internal void Remove(IReadOnlyList<CraftingIngredient> ingredients)
+        {
+            foreach (var ingredient in ingredients)
+            {
+                this[ingredient.Item] -= ingredient.Amount;
+            }
         }
     }
 }

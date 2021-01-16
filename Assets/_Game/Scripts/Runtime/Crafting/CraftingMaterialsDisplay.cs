@@ -22,6 +22,7 @@ namespace Shopkeeper.Crafting
             foreach (var item in itemsToShow.Items)
             {
                 materials.Add(item);
+                materials[item] = 50;
             }
 
             IReadOnlyList<Item> items = itemsToShow.Items;
