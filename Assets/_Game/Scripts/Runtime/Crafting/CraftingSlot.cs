@@ -17,6 +17,8 @@ namespace Shopkeeper.Crafting
         [SerializeField] private Image finalResult = null;
         [SerializeField] private ItemLister input = null;
         [SerializeField] private RectTransform slider = null;
+        [Space]
+        [SerializeField] private int maxIngredientsCount = 3;
 
         public CraftingManager Manager { get; set; }
 
@@ -29,7 +31,7 @@ namespace Shopkeeper.Crafting
 
             startCrafting.onClick.AddListener(SelectRecipe);
 
-            input.Init(3);
+            input.Init(maxIngredientsCount);
         }
 
         private void SelectRecipe()
@@ -44,13 +46,21 @@ namespace Shopkeeper.Crafting
             IsCrafting = true;
 
             finalResult.sprite = recipe.Result.Sprite;
-            for (int i = 0; i < recipe.Ingredients.Count; i++)
+            
+            int ingredientCount = recipe.Ingredients.Count;
+            if(ingredientCount > maxIngredientsCount)
+            {
+                Debug.LogError($"Trying to craft using {ingredientCount} ingredients but crafting slot can show only {maxIngredientsCount}", this);
+                ingredientCount = maxIngredientsCount;
+            }
+
+            for (int i = 0; i < ingredientCount; i++)
             {
                 CraftingIngredient ingredient = recipe.Ingredients[i];
                 input[i].gameObject.SetActive(true);
                 input[i].Set(new VisibleItemStack(ingredient.Item, ingredient.Amount));
             }
-            for (int i = recipe.Ingredients.Count; i < 3; i++)
+            for (int i = ingredientCount; i < maxIngredientsCount; i++)
             {
                 input[i].gameObject.SetActive(false);
             }
