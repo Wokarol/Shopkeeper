@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3421276cbd08cf342bd3bde5a11ca79a, type: 3}
+  m_Name: War
+  m_EditorClassIdentifier: 
+  description: I will go to war, I need 2 Bronze Flails, 5 Apples and any 4 Axes
+    you have!
+  items:
+  - id: 0
+  - id: 1
+  - id: 2
+  references:
+    version: 1
+    00000000:
+      type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
+      data:
+        Item: {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
+        Amount: 2
+    00000001:
+      type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
+      data:
+        Item: {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
+        Amount: 5
+    00000002:
+      type: {class: GroupOfItems, ns: Shopkeeper, asm: Shopkeeper.Runtime}
+      data:
+        Group: {fileID: 11400000, guid: 3e7f52a64319ed94f8fabe7170a89d2b, type: 2}
+        Amount: 4

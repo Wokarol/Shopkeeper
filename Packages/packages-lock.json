@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.jimmycushnie.command-terminal-plus": {
+      "version": "https://github.com/Wokarol/Command-Terminal-Plus.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c8f437413c03a3f186a37c8514ee7fcebd7c6b81"
+    },
     "com.unity.2d.animation": {
       "version": "5.0.3",
       "depth": 0,

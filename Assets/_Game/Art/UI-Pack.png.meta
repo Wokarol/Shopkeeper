@@ -1,0 +1,1497 @@
+fileFormatVersion: 2
+guid: 6ae54bf3358346f46bfc2f87a12264fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3668237579720831008
+    second: Panel - LightBeige
+  - first:
+      213: -2443376136601035900
+    second: Panel - Blue
+  - first:
+      213: 2469463717652560315
+    second: Panel - Brown
+  - first:
+      213: 4197783380806976390
+    second: Panel - Beige
+  - first:
+      213: 1836811252191693071
+    second: Panel Inset - Light Beige
+  - first:
+      213: 3302168856003429846
+    second: Panel Inset - Blue
+  - first:
+      213: 8092746269970594381
+    second: Panel Inset - Brown
+  - first:
+      213: 5034155095547748545
+    second: Panel Inset - Beige
+  - first:
+      213: -6700003867435285823
+    second: Button Long - Brown
+  - first:
+      213: 1547359463677576967
+    second: Button Long - Beige
+  - first:
+      213: 5751417191642902946
+    second: Button Long - Light Beige
+  - first:
+      213: -759962148457924555
+    second: Button Long - Pressed - Blue
+  - first:
+      213: -4972000800700421700
+    second: Button Long - Pressed - Brown
+  - first:
+      213: -2062678464293205043
+    second: Button Long - Pressed - Beige
+  - first:
+      213: -4498660117292244009
+    second: Button Long - Pressed - Light Beige
+  - first:
+      213: 55108481378363688
+    second: Button - Blue
+  - first:
+      213: 6751315996394970315
+    second: Button - Pressed - Blue
+  - first:
+      213: 5395803382547774859
+    second: Button - Brown
+  - first:
+      213: 5312021240580967187
+    second: Button - Beige
+  - first:
+      213: 5189013352923335429
+    second: Button - Light Beige
+  - first:
+      213: -7857215182210193454
+    second: Button - Pressed - Brown
+  - first:
+      213: -713359548452665555
+    second: Button - Pressed - Beige
+  - first:
+      213: -8125709246993829806
+    second: Button - Pressed - Light Beige
+  - first:
+      213: -7729048222631732175
+    second: Bar Back Vert
+  - first:
+      213: -5771434852249818118
+    second: Bar Back
+  - first:
+      213: -2684215542137534482
+    second: Bar Orange
+  - first:
+      213: -3754012323083002132
+    second: Bar Blue
+  - first:
+      213: 111961113719851089
+    second: Bar Yellow
+  - first:
+      213: 8760549085084765068
+    second: Bar Green
+  - first:
+      213: -6132695628934090846
+    second: Bar Green Vert
+  - first:
+      213: 6243659097813086327
+    second: Bar Yellow Vert
+  - first:
+      213: -5512443477574078259
+    second: Bar Blue Vert
+  - first:
+      213: -7280730499643739563
+    second: Bar Orange Vert
+  - first:
+      213: 7511498773520055520
+    second: RArrow - Blue
+  - first:
+      213: 4042012310229103853
+    second: RArrow - Brown
+  - first:
+      213: -2089107631800942501
+    second: RArrow - Beige
+  - first:
+      213: -4545818576624880410
+    second: RArrow - Light Beige
+  - first:
+      213: -1049210107248150280
+    second: LArrow - Blue
+  - first:
+      213: 4944039268138819735
+    second: LArrow - Brown
+  - first:
+      213: -44975881784306956
+    second: LArrow - Beige
+  - first:
+      213: 3928195305660859251
+    second: LArrow - Light Beige
+  - first:
+      213: 2350594439586490030
+    second: Circle - Blue
+  - first:
+      213: 3927047492677666490
+    second: Circle - Brown
+  - first:
+      213: 5454438770064391047
+    second: Circle - Beige
+  - first:
+      213: -3835722093773686157
+    second: Circle - Light Beige
+  - first:
+      213: -8761190998550175325
+    second: Icon Cross - Blue
+  - first:
+      213: 3825382001293330710
+    second: Icon Cross - Brown
+  - first:
+      213: -7143600885507753914
+    second: Icon Cross - Beige
+  - first:
+      213: -1009745374683406834
+    second: Icon Cross - Grey
+  - first:
+      213: -5639183706841559083
+    second: Icon Check - Blue
+  - first:
+      213: -6969135555909417968
+    second: Icon Check - Brown
+  - first:
+      213: 1833045434110899821
+    second: Icon Check - Beige
+  - first:
+      213: -5293438817734098434
+    second: Icon Check - Grey
+  - first:
+      213: 4066781490611569339
+    second: Icon Circle - Blue
+  - first:
+      213: 5382325160705553961
+    second: Icon Circle - Brown
+  - first:
+      213: -421652862488578626
+    second: Icon Circle - Beige
+  - first:
+      213: -2656519529870954131
+    second: Icon Circle - Grey
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panel - LightBeige
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1301
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 35, z: 35, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020bff2c4a238e230800000000000000
+      internalID: 3668237579720831008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel - Blue
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1301
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 35, z: 35, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b9a3d6952671ed0800000000000000
+      internalID: -2443376136601035900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel - Brown
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 881
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 35, z: 35, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9756cda2c454220800000000000000
+      internalID: 2469463717652560315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel - Beige
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 881
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 35, z: 35, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683c9097eb5814a30800000000000000
+      internalID: 4197783380806976390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel Inset - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 472
+        width: 368
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09835e1a1aad7910800000000000000
+      internalID: 1836811252191693071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel Inset - Blue
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 472
+        width: 368
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d541723419a3dd20800000000000000
+      internalID: 3302168856003429846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel Inset - Brown
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 52
+        width: 368
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4af6f6fad53f4070800000000000000
+      internalID: 8092746269970594381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel Inset - Beige
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 52
+        width: 368
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0a8562369ecd540800000000000000
+      internalID: 5034155095547748545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Blue
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1504
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 45, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109a0ecd95f91d470800000000000000
+      internalID: 8417684386838784257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Brown
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1288
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 45, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2c6cf0bfdc403a0800000000000000
+      internalID: -6700003867435285823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Beige
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1072
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 45, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7074754eb33597510800000000000000
+      internalID: 1547359463677576967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 856
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 45, z: 30, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a133f6a67321df40800000000000000
+      internalID: 5751417191642902946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Pressed - Blue
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1520
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 30, z: 30, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5383c62d3721475f0800000000000000
+      internalID: -759962148457924555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Pressed - Brown
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1304
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 30, z: 30, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb92b435d97effab0800000000000000
+      internalID: -4972000800700421700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Pressed - Beige
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1088
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 30, z: 30, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb84f18dd4ef53e0800000000000000
+      internalID: -2062678464293205043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Long - Pressed - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 872
+        width: 760
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 30, z: 30, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3249f457c8191c0800000000000000
+      internalID: -4498660117292244009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Blue
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 1504
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8292ba03fd8c3c000800000000000000
+      internalID: 55108481378363688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Pressed - Blue
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 1520
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccd883f02e71bd50800000000000000
+      internalID: 6751315996394970315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Brown
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 1288
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d7c96969eb1ea40800000000000000
+      internalID: 5395803382547774859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Beige
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 1072
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b882c8c2718b940800000000000000
+      internalID: 5312021240580967187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 856
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b01c3e624130840800000000000000
+      internalID: 5189013352923335429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Pressed - Brown
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 1304
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d72e8ccb6095f290800000000000000
+      internalID: -7857215182210193454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Pressed - Beige
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 1088
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27885d2543a916f0800000000000000
+      internalID: -713359548452665555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button - Pressed - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 872
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25073d0ed7eab3f80800000000000000
+      internalID: -8125709246993829806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Back Vert
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 692
+        width: 72
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 32, z: 0, w: 40}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cdb2e7797ecb490800000000000000
+      internalID: -7729048222631732175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Back
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 764
+        width: 144
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 0, z: 36, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb275b849eb7efa0800000000000000
+      internalID: -5771434852249818118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Orange
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 600
+        width: 144
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 0, z: 36, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee74f4e9f20cfbad0800000000000000
+      internalID: -2684215542137534482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Blue
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 508
+        width: 144
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 0, z: 36, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceed2388ea117ebc0800000000000000
+      internalID: -3754012323083002132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Yellow
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 416
+        width: 144
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 0, z: 36, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158cdeb2a04cd8100800000000000000
+      internalID: 111961113719851089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Green
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 324
+        width: 144
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 0, z: 36, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bc9dd3af8b39970800000000000000
+      internalID: 8760549085084765068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Green Vert
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 528
+        width: 72
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 36, z: 0, w: 36}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afeac161d944eaa0800000000000000
+      internalID: -6132695628934090846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Yellow Vert
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 528
+        width: 72
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 36, z: 0, w: 36}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770f8cf7edee5a650800000000000000
+      internalID: 6243659097813086327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Blue Vert
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 528
+        width: 72
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 36, z: 0, w: 36}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc037c20ddddf73b0800000000000000
+      internalID: -5512443477574078259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar Orange Vert
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 528
+        width: 72
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 36, z: 0, w: 36}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552f16f7f26a5fa90800000000000000
+      internalID: -7280730499643739563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RArrow - Blue
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 738
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecf17e36543e3860800000000000000
+      internalID: 7511498773520055520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RArrow - Brown
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 738
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de436f8d7cc181830800000000000000
+      internalID: 4042012310229103853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RArrow - Beige
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 738
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5082fc6daff103e0800000000000000
+      internalID: -2089107631800942501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RArrow - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 738
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4f6eed6120ae0c0800000000000000
+      internalID: -4545818576624880410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LArrow - Blue
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 637
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f879b667f47071f0800000000000000
+      internalID: -1049210107248150280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LArrow - Brown
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 637
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7902ffc0581cc9440800000000000000
+      internalID: 4944039268138819735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LArrow - Beige
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 637
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f259ce7ca6306ff0800000000000000
+      internalID: -44975881784306956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LArrow - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 637
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373c54a61d0c38630800000000000000
+      internalID: 3928195305660859251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle - Blue
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 668
+        width: 140
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6af86503dfe9020800000000000000
+      internalID: 2350594439586490030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle - Brown
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 668
+        width: 140
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6042163ecaf7630800000000000000
+      internalID: 3927047492677666490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle - Beige
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 668
+        width: 140
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b7eca992f02bb40800000000000000
+      internalID: 5454438770064391047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle - Light Beige
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 668
+        width: 140
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a70870417c4cac0800000000000000
+      internalID: -3835722093773686157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Cross - Blue
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 520
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a12112a43ff96680800000000000000
+      internalID: -8761190998550175325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Cross - Brown
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 520
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619034599ac761530800000000000000
+      internalID: 3825382001293330710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Cross - Beige
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 520
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648f422d7d4dcdc90800000000000000
+      internalID: -7143600885507753914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Cross - Grey
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 521
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ed66c7ee9acf1f0800000000000000
+      internalID: -1009745374683406834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Check - Blue
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 400
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfc98adb489db1b0800000000000000
+      internalID: -5639183706841559083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Check - Brown
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 400
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014897ec228a84f90800000000000000
+      internalID: -6969135555909417968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Check - Beige
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 400
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66f4554c19407910800000000000000
+      internalID: 1833045434110899821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Check - Grey
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 400
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef102bce07de986b0800000000000000
+      internalID: -5293438817734098434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Circle - Blue
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 277
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2490f083c107830800000000000000
+      internalID: 4066781490611569339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Circle - Brown
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 277
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9267085873cd1ba40800000000000000
+      internalID: 5382325160705553961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Circle - Beige
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 277
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb577d0a4fcf52af0800000000000000
+      internalID: -421652862488578626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon Circle - Grey
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 277
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61772bff85222bd0800000000000000
+      internalID: -2656519529870954131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
