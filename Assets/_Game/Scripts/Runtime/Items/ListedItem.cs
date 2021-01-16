@@ -39,12 +39,12 @@ namespace Shopkeeper
 
         private List<DisplayedIcon> icons = new List<DisplayedIcon>();
 
-        private void Start()
+        private void Awake()
         {
-            icons.Add(new DisplayedIcon(icon));
+            icons.Add(new DisplayedIcon(icon));       
         }
 
-        public void Set(VisibleItemStack stack)
+        public void Set(VisibleItemStack stack, bool showEmpty = true)
         {
             Stack = stack;
             count.text = stack.Amount.ToString();
@@ -52,8 +52,8 @@ namespace Shopkeeper
             if (stack.Amount == 0)
             {
                 icon.sprite = stack.Items[0].Sprite;
-                icon.material = emptyMaterial;
-                icon.color = emptyColor;
+                icon.material = showEmpty ? emptyMaterial : icon.defaultMaterial;
+                icon.color = showEmpty ? emptyColor : normalColor;
             }
             else
             {

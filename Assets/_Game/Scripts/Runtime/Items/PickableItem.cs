@@ -24,6 +24,12 @@ namespace Shopkeeper
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (pickedItem != null)
+            {
+                eventData.pointerDrag = null;
+                return;
+            }
+
             image.material = dragMaterial;
             image.color = new Color(0, 0, 0, 0.5f);
 
@@ -40,7 +46,7 @@ namespace Shopkeeper
             rt.position = transform.position;
             pickedItem.sprite = image.sprite;
 
-            rt.DOScale(1.4f, 0.25f).SetEase(Ease.OutBack);
+            rt.DOScale(1.4f, 0.25f).SetEase(Ease.OutBack).SetId("Scale Tween");
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -54,19 +60,12 @@ namespace Shopkeeper
             RectTransform rt = (RectTransform)pickedItem.transform;
             Vector3 animationTarget = Vector3.zero;
 
-            if(TryGetAcceptableTarget(eventData, out DropTarget dropTarget))
+            if (TryGetAcceptableTarget(eventData, out DropTarget dropTarget))
             {
                 DropOnto(rt, dropTarget.Position, 0.2f, dropTarget.Size, () =>
                     {
-                        try
-                        {
-                            dropTarget.OnDropped?.Invoke();
-                            Destroy(gameObject);
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.LogException(e);
-                        }
+                        dropTarget.OnDropped?.Invoke();
+                        Destroy(gameObject);
                     });
             }
             else
@@ -75,7 +74,6 @@ namespace Shopkeeper
 
                 DropOnto(rt, b.center, 0.2f, b.size);
             }
-
         }
 
         private Bounds GetImageBounds()
@@ -88,6 +86,8 @@ namespace Shopkeeper
 
         private void DropOnto(RectTransform rt, Vector3 targetPosition, float duration, Vector2 sizeDelta, Action onFinished = null)
         {
+            rt.DOKill();
+
             rt.DOSizeDelta(sizeDelta, duration);
             rt.DOScale(1f, duration);
             rt.DOLocalMove(targetPosition, duration).SetEase(Ease.InOutCirc)
@@ -97,7 +97,8 @@ namespace Shopkeeper
                     image.color = new Color(1, 1, 1, 1);
                     Destroy(pickedItem.gameObject);
                     onFinished?.Invoke();
-                });
+                })
+                .SetId("Returning Tween");
         }
 
         private bool TryGetAcceptableTarget(PointerEventData eventData, out DropTarget dropTarget)
@@ -116,7 +117,7 @@ namespace Shopkeeper
                     if (result.gameObject.TryGetComponent(out IDragAndDropTarget target))
                     {
                         // Item is over IDragAndDropTarget
-                        if(target.FindDropTarget(item, out Vector2 pos, out Vector2 size, out Action onDropped))
+                        if (target.FindDropTarget(item, out Vector2 pos, out Vector2 size, out Action onDropped))
                         {
                             dropTarget = new DropTarget(target, pos, size, onDropped);
                             return true;
