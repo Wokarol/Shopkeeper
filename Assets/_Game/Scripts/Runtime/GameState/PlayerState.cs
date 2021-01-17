@@ -29,7 +29,10 @@ namespace Shopkeeper.World
             {
                 if (clientHappiness == value)
                     return;
-                clientHappiness = value;
+                if (value > 0)
+                    clientHappiness = value;
+                else
+                    clientHappiness = 0;
                 HappinessChanged?.Invoke(clientHappiness);
             }
         }
