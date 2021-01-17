@@ -1158,6 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990155340}
+  - component: {fileID: 990155341}
   m_Layer: 5
   m_Name: TopBar
   m_TagString: Untagged
@@ -1186,6 +1187,20 @@ RectTransform:
   m_AnchoredPosition: {x: 2.5, y: 0}
   m_SizeDelta: {x: -34.999992, y: 90}
   m_Pivot: {x: 0.5, y: 1.0000005}
+--- !u!114 &990155341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990155339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4171b0701a540674191dbaab38c8f65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyLabel: {fileID: 405448094}
+  happinessLabel: {fileID: 1935204907}
 --- !u!1 &1061274824
 GameObject:
   m_ObjectHideFlags: 0
