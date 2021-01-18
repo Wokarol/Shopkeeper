@@ -1,3 +1,4 @@
+using Shopkeeper.World;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,9 @@ namespace Shopkeeper
 {
     public class MenuBrain : MonoBehaviour
     {
-        public void ChangeScene(string target)
+        public void StartGame()
         {
-            SceneManager.LoadScene(target);
+            WorldContext.GameState.StartDay();
         }
     }
 }
