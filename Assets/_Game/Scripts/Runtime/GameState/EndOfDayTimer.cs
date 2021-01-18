@@ -24,6 +24,9 @@ namespace Shopkeeper
             if (timeLeft <= 0)
                 return;
 
+            if (WorldContext.Cheats.StopTime)
+                return;
+
             timeLeft -= Time.deltaTime;
 
             TimeSpan span = TimeSpan.FromSeconds(timeLeft);

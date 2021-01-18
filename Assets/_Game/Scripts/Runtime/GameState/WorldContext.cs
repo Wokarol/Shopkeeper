@@ -8,6 +8,7 @@ namespace Shopkeeper.World
     {
         public static PlayerState PlayerState { get; private set; }
         public static GameState GameState { get; private set; }
+        public static Cheats Cheats { get; private set; }
 
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -15,6 +16,7 @@ namespace Shopkeeper.World
         {
             PlayerState = new PlayerState();
             GameState = new GameState();
+            Cheats = new Cheats();
         }
     }
 }

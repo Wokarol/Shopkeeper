@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 100281273}
-  timePerDay: 10
+  timePerDay: 30
 --- !u!1 &1041515570
 GameObject:
   m_ObjectHideFlags: 0
