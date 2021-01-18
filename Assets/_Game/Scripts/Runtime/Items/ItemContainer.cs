@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Shopkeeper.World;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +13,15 @@ namespace Shopkeeper
     {
         [SerializeField] private PickableItem itemPrefab;
 
-        [SerializeField] private List<Item> items = new List<Item>(); // To be yeeted out of inspector
+        [SerializeField] private List<Item> items; // To be yeeted out of inspector
         public int columnCount = 6;
+
+
 
         private void Start()
         {
+            items = WorldContext.PlayerState.Items;
+
             for (int i = 0; i < items.Count; i++)
             {
                 Item item = items[i];

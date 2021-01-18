@@ -19,10 +19,13 @@ namespace Shopkeeper.Crafting
         {
             materials = WorldContext.PlayerState.CraftingMaterials;
 
-            foreach (var item in itemsToShow.Items)
+            if(materials.IsEmpty)
             {
-                materials.Add(item);
-                materials[item] = 10;
+                foreach (var item in itemsToShow.Items)
+                {
+                    materials.Add(item);
+                    materials[item] = 10;
+                }
             }
 
             IReadOnlyList<Item> items = itemsToShow.Items;

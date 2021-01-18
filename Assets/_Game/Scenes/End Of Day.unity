@@ -793,9 +793,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1543665795}
-        m_TargetAssemblyTypeName: Shopkeeper.MenuBrain, Shopkeeper.Runtime
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Shopkeeper.EndOfDayBrain, Shopkeeper.Runtime
+        m_MethodName: NextDay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543665790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8676d904c775efb499bc3cd157102b13, type: 3}
+  m_Script: {fileID: 11500000, guid: b906e33fee9bc20459665c88b65b10c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1602749016
