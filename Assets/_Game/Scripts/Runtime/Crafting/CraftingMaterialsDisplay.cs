@@ -41,6 +41,11 @@ namespace Shopkeeper.Crafting
             materials.Changed += UpdateItemCount;
         }
 
+        private void OnDestroy()
+        {
+            materials.Changed -= UpdateItemCount;
+        }
+
         private void UpdateItemCount(Item item, int amount)
         {
             if(listedItemsByItem.TryGetValue(item, out ListedItem listedItem))
