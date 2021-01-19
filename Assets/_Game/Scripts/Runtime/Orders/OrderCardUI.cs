@@ -26,6 +26,10 @@ namespace Shopkeeper
         [Space]
         [SerializeField] private Color goodColor = Color.green;
         [SerializeField] private Color badColor = Color.red;
+        [Header("Animations")]
+        [SerializeField] private int curveOffset = 50;
+        [SerializeField] private float flyDuration = 7f;
+        [SerializeField] private int ScaleOvershoot = 4;
 
         private Order order;
         private PlayerState playerState;
@@ -92,9 +96,16 @@ namespace Shopkeeper
         private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos)
         {
             rt.SetParent(moneyImage.canvas.transform);
+
+            Vector3[] path = new Vector3[3];
+            path[0] = rt.position;
+            path[2] = targetPos;
+
+            path[1] = (Quaternion.Euler(0, 0, 90) * (path[2] - path[0]).normalized * curveOffset) + Vector3.Lerp(path[0], path[2], 0.5f);
+
             Sequence seq = DOTween.Sequence();
-            seq.Append(rt.DOMove(targetPos, 0.5f).SetEase(Ease.InCubic));
-            seq.Join(rt.DOScale(0, 0.5f).SetEase(Ease.InCubic));
+            seq.Append(rt.DOPath(path, flyDuration, pathType: PathType.CatmullRom).SetEase(Ease.InSine));
+            seq.Join(rt.DOScale(0, flyDuration * 1f).SetEase(Ease.InBack, ScaleOvershoot));
 
             return seq;
         }
