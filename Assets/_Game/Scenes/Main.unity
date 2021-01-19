@@ -2472,8 +2472,10 @@ MonoBehaviour:
   flyInDistance: 500
   flyInDuration: 0.5
   flyInEase: 27
-  flyOutDuration: 0.3
+  flyOutDuration: 0.15
   flyOutEase: 8
+  cardMovementInterval: 0.05
+  cardMoveUpDuration: 0.2
 --- !u!1 &1741679637
 GameObject:
   m_ObjectHideFlags: 0

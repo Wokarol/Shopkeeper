@@ -21,6 +21,8 @@ namespace Shopkeeper
         [Space]
         [SerializeField] float flyOutDuration = 0.5f;
         [SerializeField] Ease flyOutEase = Ease.InBack;
+        [SerializeField] float cardMovementInterval = 0.05f;
+        [SerializeField] float cardMoveUpDuration = 0.3f;
 
         private List<OrderCardUI> createdOrders = new List<OrderCardUI>();
 
@@ -63,8 +65,8 @@ namespace Shopkeeper
             {
                 RectTransform ort = createdOrders[i].transform as RectTransform;
 
-                seq.Insert((i - index) * 0.05f, 
-                    ort.DOAnchorPosY(ort.anchoredPosition.y + spacing, 0.3f)
+                seq.Insert((i - index) * cardMovementInterval, 
+                    ort.DOAnchorPosY(ort.anchoredPosition.y + spacing, cardMoveUpDuration)
                         .SetEase(Ease.InBack, 1.05f));
             }
 

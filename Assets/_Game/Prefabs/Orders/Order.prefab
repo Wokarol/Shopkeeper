@@ -624,6 +624,9 @@ MonoBehaviour:
   happinessImage: {fileID: 1087482882789516415}
   goodColor: {r: 0.64705884, g: 1, b: 0.77254903, a: 1}
   badColor: {r: 0.58431375, g: 0.29803923, b: 0.21960784, a: 1}
+  curveOffset: 100
+  flyDuration: 0.8
+  ScaleOvershoot: 4
 --- !u!114 &6107562813051249231
 MonoBehaviour:
   m_ObjectHideFlags: 0
