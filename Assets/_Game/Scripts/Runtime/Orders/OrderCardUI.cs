@@ -20,10 +20,16 @@ namespace Shopkeeper
         [Space]
         [SerializeField] private Image resultPanel = null;
         [SerializeField] private TextMeshProUGUI moneyLabel = null;
+        [SerializeField] private Image moneyImage = null;
         [SerializeField] private TextMeshProUGUI happinessLabel = null;
+        [SerializeField] private Image happinessImage = null;
         [Space]
         [SerializeField] private Color goodColor = Color.green;
         [SerializeField] private Color badColor = Color.red;
+        [Header("Animations")]
+        [SerializeField] private int curveOffset = 50;
+        [SerializeField] private float flyDuration = 7f;
+        [SerializeField] private int ScaleOvershoot = 4;
 
         private Order order;
         private PlayerState playerState;
@@ -36,28 +42,28 @@ namespace Shopkeeper
 
             resultPanel.gameObject.SetActive(false);
             confirmButton.onClick.AddListener(FinisheOrder);
-            cancelButton.onClick.AddListener(() => ShowResult(badColor, 0, -25));
+            cancelButton.onClick.AddListener(() => ShowResult(false, 0, -25));
         }
 
         private void FinisheOrder()
         {
             if (order.IsFullfilled(itemLister))
             {
-                ShowResult(goodColor, 100, 20);
+                ShowResult(true, 100, 20);
             }
             else
             {
-                ShowResult(badColor, 0, -50);
+                ShowResult(false, 0, -50);
             }
         }
 
-        private void ShowResult(Color color, int money, int happiness)
+        private void ShowResult(bool success, int money, int happiness)
         {
             playerState.Money += money;
             playerState.ClientHappiness += happiness;
 
             resultPanel.gameObject.SetActive(true);
-            resultPanel.color = color;
+            resultPanel.color = success ? goodColor : badColor;
             moneyLabel.text = money.ToString();
             happinessLabel.text = happiness.ToString();
 
@@ -66,11 +72,42 @@ namespace Shopkeeper
                 .DOFade(0, 0.2f)
                 .From()
                 .SetEase(Ease.InOutCubic));
-            seq.AppendInterval(0.5f);
+
+            if (success)
+            {
+                var mrt = moneyImage.transform as RectTransform;
+                var hrt = happinessImage.transform as RectTransform;
+
+                seq.Append(DOFly(mrt, moneyImage.canvas.transform, MoneyAndHappinessBar.MoneyIcon.position));
+                seq.Join(DOFly(hrt, happinessImage.canvas.transform, MoneyAndHappinessBar.HappinessIcon.position));
+
+            }
+            else
+            {
+                seq.Append(transform.DOShakePosition(0.5f, 5f));
+            }
+
             seq.AppendCallback(() =>
             {
                 OnOrderFinished?.Invoke();
             });
+        }
+
+        private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos)
+        {
+            rt.SetParent(moneyImage.canvas.transform);
+
+            Vector3[] path = new Vector3[3];
+            path[0] = rt.position;
+            path[2] = targetPos;
+
+            path[1] = (Quaternion.Euler(0, 0, 90) * (path[2] - path[0]).normalized * curveOffset) + Vector3.Lerp(path[0], path[2], 0.5f);
+
+            Sequence seq = DOTween.Sequence();
+            seq.Append(rt.DOPath(path, flyDuration, pathType: PathType.CatmullRom).SetEase(Ease.InSine));
+            seq.Join(rt.DOScale(0, flyDuration * 1f).SetEase(Ease.InBack, ScaleOvershoot));
+
+            return seq;
         }
 
         public void Init(Order order)

@@ -11,15 +11,22 @@ namespace Shopkeeper
     public class MoneyAndHappinessBar : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI moneyLabel = null;
+        [SerializeField] private RectTransform moneyIcon;
         [SerializeField] private TextMeshProUGUI happinessLabel = null;
+        [SerializeField] private RectTransform happinessIcon;
         [Space]
         [SerializeField] private bool animateNumberShow = false;
         [SerializeField] private float numberIncreaseSpeed = 100;
 
         PlayerState playerState;
 
+        static public RectTransform MoneyIcon;
+        static public RectTransform HappinessIcon;
+
         private void Start()
         {
+            MoneyIcon = moneyIcon;
+            HappinessIcon = happinessIcon;
             playerState = WorldContext.PlayerState;
 
             playerState.MoneyChanged += m =>
