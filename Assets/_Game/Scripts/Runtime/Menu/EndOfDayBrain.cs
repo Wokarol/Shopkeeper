@@ -2,13 +2,12 @@ using Shopkeeper.World;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Shopkeeper
 {
-    public class MenuBrain : MonoBehaviour
+    public class EndOfDayBrain : MonoBehaviour
     {
-        public void StartGame()
+        public void NextDay()
         {
             WorldContext.GameState.StartDay();
         }

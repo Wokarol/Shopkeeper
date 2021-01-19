@@ -41,7 +41,7 @@ namespace Shopkeeper
 
         private void Awake()
         {
-            icons.Add(new DisplayedIcon(icon));       
+            icons.Add(new DisplayedIcon(icon));
         }
 
         public void Set(VisibleItemStack stack, bool showEmpty = true)

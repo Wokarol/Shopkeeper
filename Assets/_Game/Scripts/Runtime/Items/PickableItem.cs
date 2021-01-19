@@ -16,6 +16,8 @@ namespace Shopkeeper
         private Image pickedItem;
         private Item item;
 
+        public event Action<Item> OnDestroyed;
+
         public void Init(Item item)
         {
             this.item = item;
@@ -97,6 +99,7 @@ namespace Shopkeeper
                     image.color = new Color(1, 1, 1, 1);
                     Destroy(pickedItem.gameObject);
                     onFinished?.Invoke();
+                    OnDestroyed?.Invoke(item);
                 })
                 .SetId("Returning Tween");
         }

@@ -6,12 +6,17 @@ namespace Shopkeeper.World
 {
     public static class WorldContext
     {
-        public static PlayerState PlayerState { get; private set; } = new PlayerState();
+        public static PlayerState PlayerState { get; private set; }
+        public static GameState GameState { get; private set; }
+        public static Cheats Cheats { get; private set; }
+
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void Reset()
         {
             PlayerState = new PlayerState();
+            GameState = new GameState();
+            Cheats = new Cheats();
         }
     }
 }

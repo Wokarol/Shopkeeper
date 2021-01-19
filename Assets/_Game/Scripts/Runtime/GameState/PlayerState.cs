@@ -1,11 +1,13 @@
 ﻿using Shopkeeper.Crafting;
 using System;
+using System.Collections.Generic;
 
 namespace Shopkeeper.World
 {
     public class PlayerState
     {
         public CraftingMaterials CraftingMaterials = new CraftingMaterials();
+        public List<Item> Items = new List<Item>();
 
         private int clientHappiness = 100;
         private int money = 0;
