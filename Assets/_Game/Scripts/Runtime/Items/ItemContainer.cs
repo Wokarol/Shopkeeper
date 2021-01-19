@@ -34,18 +34,21 @@ namespace Shopkeeper
             }
         }
 
-        private void SpawnItemElement(Item item, float delay)
+        private PickableItem SpawnItemElement(Item item, float delay)
         {
             PickableItem image = Instantiate(itemPrefab, transform);
             image.Init(item);
 
             image.transform.DOScale(Vector3.zero, 0.5f).From().SetDelay(delay).SetEase(Ease.OutBack);
+
+            return image;
         }
 
         public void Add(Item item)
         {
             items.Add(item);
-            SpawnItemElement(item, 0);
+            PickableItem i = SpawnItemElement(item, 0);
+            i.OnDestroyed += i => items.Remove(i);
         }
 
         public void Clear()
