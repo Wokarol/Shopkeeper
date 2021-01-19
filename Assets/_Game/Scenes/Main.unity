@@ -1494,8 +1494,49 @@ MonoBehaviour:
   panelPeekMargin: 40
   openingDuration: 0.5
   openingEase: 9
-  closingDuration: 0.8
-  closingEase: 30
+  closingDuration: 0.6
+  closingEase:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.010489832
+      outSlope: 0.010489832
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 0.7513228
+    - serializedVersion: 3
+      time: 0.64774096
+      value: 1
+      inSlope: 5.281845
+      outSlope: -2.6792476
+      tangentMode: 1
+      weightedMode: 1
+      inWeight: 0.115729734
+      outWeight: 0.11572961
+    - serializedVersion: 3
+      time: 0.86020064
+      value: 1
+      inSlope: 2.8223624
+      outSlope: -2.1118197
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.12511972
+      outWeight: 0.20454235
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2.5360696
+      outSlope: 2.5360696
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20645474
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1201943447
 GameObject:
   m_ObjectHideFlags: 0

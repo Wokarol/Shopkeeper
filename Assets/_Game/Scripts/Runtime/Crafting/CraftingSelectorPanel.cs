@@ -19,7 +19,7 @@ namespace Shopkeeper.Crafting
         [SerializeField] private float openingDuration = 0.8f;
         [SerializeField] private Ease openingEase = Ease.OutBounce;
         [SerializeField] private float closingDuration = 0.8f;
-        [SerializeField] private Ease closingEase = Ease.InOutCubic;
+        [SerializeField] private AnimationCurve closingEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private bool open;
 
         private RectTransform rectTransform;
