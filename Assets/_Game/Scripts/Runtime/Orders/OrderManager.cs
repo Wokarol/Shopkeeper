@@ -63,7 +63,7 @@ namespace Shopkeeper
             {
                 RectTransform ort = createdOrders[i].transform as RectTransform;
 
-                seq.Insert(flyOutDuration + (i - index) * 0.05f, 
+                seq.Insert((i - index) * 0.05f, 
                     ort.DOAnchorPosY(ort.anchoredPosition.y + spacing, 0.3f)
                         .SetEase(Ease.InBack, 1.05f));
             }
