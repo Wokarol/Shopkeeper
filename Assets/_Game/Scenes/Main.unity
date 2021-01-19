@@ -1491,6 +1491,10 @@ MonoBehaviour:
   listTranform: {fileID: 1571464625}
   craftableItemPrefab: {fileID: 8212676873728576660, guid: fd80a4258f9cf5649823d5ce71a66d6c, type: 3}
   panelPeekMargin: 40
+  openingDuration: 0.5
+  openingEase: 9
+  closingDuration: 0.8
+  closingEase: 30
 --- !u!1 &1201943447
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,11 @@ namespace Shopkeeper.Crafting
         [SerializeField] private CraftableItemUI craftableItemPrefab;
         [Space]
         [SerializeField] private float panelPeekMargin = 40;
+        [Header("Space")]
+        [SerializeField] private float openingDuration = 0.8f;
+        [SerializeField] private Ease openingEase = Ease.OutBounce;
+        [SerializeField] private float closingDuration = 0.8f;
+        [SerializeField] private Ease closingEase = Ease.InOutCubic;
         private bool open;
 
         private RectTransform rectTransform;
@@ -79,25 +84,25 @@ namespace Shopkeeper.Crafting
 
             if (open)
             {
-                float duration = 0.8f;
+                float duration = openingDuration;
                 openCloseSequence = DOTween.Sequence();
 
                 openCloseSequence.Append(rectTransform.DOAnchorMax(Vector2.one, duration));
                 openCloseSequence.Join(rectTransform.DOAnchorMin(Vector2.zero, duration));
                 openCloseSequence.Join(rectTransform.DOAnchorPos(Vector2.zero, duration));
 
-                openCloseSequence.SetEase(Ease.OutBounce);
+                openCloseSequence.SetEase(openingEase);
             }
             else
             {
-                float duration = 0.8f;
+                float duration = closingDuration;
                 openCloseSequence = DOTween.Sequence();
 
                 openCloseSequence.Append(rectTransform.DOAnchorMax(new Vector2(1, 0), duration));
                 openCloseSequence.Join(rectTransform.DOAnchorMin(new Vector2(0, -1), duration));
                 openCloseSequence.Join(rectTransform.DOAnchorPos(new Vector2(0, panelPeekMargin), duration));
 
-                openCloseSequence.SetEase(Ease.InOutCubic);
+                openCloseSequence.SetEase(closingEase);
             }
         }
     }
