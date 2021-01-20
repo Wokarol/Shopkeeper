@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Shopkeeper.Crafting
 {
@@ -37,6 +38,11 @@ namespace Shopkeeper.Crafting
         {
             materials.Add(item, 0);
             Changed?.Invoke(item, 0);
+        }
+
+        public int CountAll()
+        {
+            return materials.Values.Sum();
         }
 
         internal bool Contains(IReadOnlyList<CraftingIngredient> ingredients)
