@@ -7,6 +7,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+using Random = UnityEngine.Random;
+
 namespace Shopkeeper
 {
     [SelectionBase]
@@ -27,9 +29,13 @@ namespace Shopkeeper
         [SerializeField] private Color goodColor = Color.green;
         [SerializeField] private Color badColor = Color.red;
         [Header("Animations")]
-        [SerializeField] private int curveOffset = 50;
+        [SerializeField] private Vector2 curveOffsetMinMaxMoney = new Vector2(50, 100);
+        [SerializeField] private Vector2 curveOffsetMinMaxHappiness = new Vector2(50, 100);
+        [SerializeField] private float goodFlyingInterval = 0.03f;
         [SerializeField] private float flyDuration = 7f;
         [SerializeField] private int ScaleOvershoot = 4;
+        [SerializeField] private float moneyPerIcon = 25;
+        [SerializeField] private float happinessPerIcon = 25;
 
         private Order order;
         private PlayerState playerState;
@@ -75,11 +81,7 @@ namespace Shopkeeper
 
             if (success)
             {
-                var mrt = moneyImage.transform as RectTransform;
-                var hrt = happinessImage.transform as RectTransform;
-
-                seq.Append(DOFly(mrt, moneyImage.canvas.transform, MoneyAndHappinessBar.MoneyIcon.position));
-                seq.Join(DOFly(hrt, happinessImage.canvas.transform, MoneyAndHappinessBar.HappinessIcon.position));
+                seq.Append(AnimateFlyingGoods(Mathf.CeilToInt(money / moneyPerIcon), Mathf.CeilToInt(happiness / happinessPerIcon)));
 
             }
             else
@@ -93,7 +95,29 @@ namespace Shopkeeper
             });
         }
 
-        private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos)
+        private Tween AnimateFlyingGoods(int countMoney, int countHappiness)
+        {
+            Sequence seq = DOTween.Sequence();
+            for (int i = 0; i < countMoney; i++)
+            {
+                Image moneyIconCopy = Instantiate(moneyImage, moneyImage.transform.parent);
+                var mrt = moneyIconCopy.transform as RectTransform;
+
+                float delay = i * goodFlyingInterval;
+                seq.Insert(delay, DOFly(mrt, moneyIconCopy.canvas.transform, MoneyAndHappinessBar.MoneyIcon.position, curveOffsetMinMaxMoney));
+            }
+            for (int i = 0; i < countHappiness; i++)
+            {
+                Image happinessImageCopy = Instantiate(happinessImage, happinessImage.transform.parent);
+                var hrt = happinessImageCopy.transform as RectTransform;
+
+                float delay = i * goodFlyingInterval;
+                seq.Insert(delay, DOFly(hrt, happinessImageCopy.canvas.transform, MoneyAndHappinessBar.HappinessIcon.position, curveOffsetMinMaxHappiness));
+            }
+            return seq;
+        }
+
+        private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos, Vector2 curveOffsetMinMax)
         {
             rt.SetParent(moneyImage.canvas.transform);
 
@@ -101,7 +125,12 @@ namespace Shopkeeper
             path[0] = rt.position;
             path[2] = targetPos;
 
-            path[1] = (Quaternion.Euler(0, 0, 90) * (path[2] - path[0]).normalized * curveOffset) + Vector3.Lerp(path[0], path[2], 0.5f);
+            float offset = Random.Range(curveOffsetMinMax.x, curveOffsetMinMax.y);
+
+            Vector3 tangent = Quaternion.Euler(0, 0, 90) * (path[2] - path[0]).normalized;
+            Vector3 middle = Vector3.Lerp(path[0], path[2], 0.5f);
+
+            path[1] = tangent * offset + middle;
 
             Sequence seq = DOTween.Sequence();
             seq.Append(rt.DOPath(path, flyDuration, pathType: PathType.CatmullRom).SetEase(Ease.InSine));
