@@ -834,6 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countLabel: {fileID: 81430480}
+  slider: {fileID: 805135244}
   MaxValue: 0
 --- !u!1 &477792803
 GameObject:
@@ -1674,7 +1675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 340381678}
-  fillSlider: {fileID: 0}
+  fillSlider: {fileID: 372997382}
   craftingMaterialsToGet: {fileID: 11400000, guid: 6b641383df833984697f326fb8cca1c6, type: 2}
   mainButton: {fileID: 724697916}
   mainButtonLabel: {fileID: 1560590298}
