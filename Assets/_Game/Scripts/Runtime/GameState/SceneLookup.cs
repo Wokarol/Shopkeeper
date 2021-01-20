@@ -11,6 +11,7 @@ namespace Shopkeeper
         public string Menu = "Menu";
         public string Main = "Main";
         public string EndOfDay = "End Of Day";
+        public string Mine = "Mine";
 
         public static SceneLookup LoadFromResources()
         {
