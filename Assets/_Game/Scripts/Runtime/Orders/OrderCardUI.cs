@@ -105,6 +105,11 @@ namespace Shopkeeper
 
                 float delay = i * goodFlyingInterval;
                 seq.Insert(delay, DOFly(mrt, moneyIconCopy.canvas.transform, MoneyAndHappinessBar.MoneyIcon.position, curveOffsetMinMaxMoney));
+                seq.InsertCallback(delay + flyDuration, () =>
+                {
+                    MoneyAndHappinessBar.MoneyIcon.DOKill(true);
+                    MoneyAndHappinessBar.MoneyIcon.DOPunchPosition(Random.insideUnitCircle.normalized * 10, 0.10f);
+                });
             }
             for (int i = 0; i < countHappiness; i++)
             {
@@ -113,6 +118,11 @@ namespace Shopkeeper
 
                 float delay = i * goodFlyingInterval;
                 seq.Insert(delay, DOFly(hrt, happinessImageCopy.canvas.transform, MoneyAndHappinessBar.HappinessIcon.position, curveOffsetMinMaxHappiness));
+                seq.InsertCallback(delay + flyDuration, () =>
+                {
+                    MoneyAndHappinessBar.HappinessIcon.DOKill(true);
+                    MoneyAndHappinessBar.HappinessIcon.DOPunchPosition(Random.insideUnitCircle.normalized * 10, 0.1f);
+                });
             }
             return seq;
         }
