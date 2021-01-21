@@ -16,6 +16,11 @@ namespace Shopkeeper.World
             sceneLookup = SceneLookup.LoadFromResources();
         }
 
+        internal void StartMine()
+        {
+            SceneManager.LoadScene(sceneLookup.Mine);
+        }
+
         public void EndDay()
         {
             SceneManager.LoadScene(sceneLookup.EndOfDay);

@@ -11,5 +11,10 @@ namespace Shopkeeper
         {
             WorldContext.GameState.StartDay();
         }
+
+        public void Mine()
+        {
+            WorldContext.GameState.StartMine();
+        }
     }
 }
