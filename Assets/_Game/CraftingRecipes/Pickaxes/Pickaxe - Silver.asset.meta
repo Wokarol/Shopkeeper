@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: aadcdef0bff7a1e4480c3eafe7340706
+guid: b0620782151b3b24ca6f65bef916a6ac
 labels:
-- Crafting
-- Item
+- Recipie
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
