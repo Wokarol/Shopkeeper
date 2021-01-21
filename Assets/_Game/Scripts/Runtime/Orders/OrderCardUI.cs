@@ -129,7 +129,7 @@ namespace Shopkeeper
 
         private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos, Vector2 curveOffsetMinMax)
         {
-            rt.SetParent(moneyImage.canvas.transform);
+            rt.SetParent(parent);
 
             Vector3[] path = new Vector3[3];
             path[0] = rt.position;
