@@ -58,12 +58,14 @@ namespace Shopkeeper
 
         private void UpdateMoney(int value)
         {
-            moneyLabel.text = value.ToString();
+            if (moneyLabel != null)
+                moneyLabel.text = value.ToString();
         }
 
         private void UpdateHappiness(int value)
         {
-            happinessLabel.text = value.ToString();
+            if (happinessLabel != null)
+                happinessLabel.text = value.ToString();
         }
     }
 }

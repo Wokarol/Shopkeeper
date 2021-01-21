@@ -40,6 +40,15 @@ namespace Shopkeeper.Crafting
             Changed?.Invoke(item, 0);
         }
 
+        internal void Add(CraftingMaterials materialsToAdd)
+        {
+            List<Item> items = materialsToAdd.materials.Keys.ToList();
+            foreach (var item in items)
+            {
+                this[item] += materialsToAdd[item];
+            }
+        }
+
         public int CountAll()
         {
             return materials.Values.Sum();
@@ -63,6 +72,15 @@ namespace Shopkeeper.Crafting
             foreach (var ingredient in ingredients)
             {
                 this[ingredient.Item] -= ingredient.Amount;
+            }
+        }
+
+        public void ZeroOut()
+        {
+            List<Item> items = materials.Keys.ToList();
+            foreach (var item in items)
+            {
+                this[item] = 0;
             }
         }
     }
