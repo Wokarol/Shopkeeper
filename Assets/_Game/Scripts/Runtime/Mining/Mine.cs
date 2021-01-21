@@ -31,6 +31,10 @@ namespace Shopkeeper.Mining
         [SerializeField, TextArea(1, 3)] private string goDeeperMessage;
         [Header("Balancing")]
         [SerializeField] private int mineCost = 50;
+        [SerializeField] private float flyDuration;
+        [SerializeField] private float scaleOvershoot;
+        [SerializeField] private Vector2 curveOffsetMinMax = new Vector2(0, 0);
+        [SerializeField] private Vector2 delayMinMax = new Vector2(0, 0);
 
         CraftingMaterials currentYield;
         private PlayerState playerState;
@@ -80,9 +84,18 @@ namespace Shopkeeper.Mining
                 {
                     case ButtonType.Mine:
 
-                        if (playerState.Money > mineCost)
+                        if (playerState.Money >= mineCost)
                         {
                             playerState.Money -= mineCost;
+
+                            for (int i = 0; i < 10; i++)
+                            {
+                                Image coin = Instantiate(goldCountIcon, goldCountIcon.transform.parent);
+                                var cointRT = coin.transform as RectTransform;
+                                DOFly(cointRT, coin.canvas.transform, mainButton.transform.position, curveOffsetMinMax)
+                                    .SetDelay(Random.Range(delayMinMax.x, delayMinMax.y));
+                            }
+
                             yield return DoMining();
                         }
                         else
@@ -151,6 +164,29 @@ namespace Shopkeeper.Mining
         {
             clickInQueue = ButtonType.None;
             yield return new WaitUntil(() => mask.HasFlag(clickInQueue) && clickInQueue != ButtonType.None);
+        }
+
+        private Tween DOFly(RectTransform rt, Transform parent, Vector3 targetPos, Vector2 curveOffsetMinMax)
+        {
+            rt.SetParent(parent);
+
+            Vector3[] path = new Vector3[3];
+            path[0] = rt.position;
+            path[2] = targetPos;
+
+            float offset = Random.Range(curveOffsetMinMax.x, curveOffsetMinMax.y);
+
+            Vector3 tangent = Quaternion.Euler(0, 0, 90) * (path[2] - path[0]).normalized;
+            Vector3 middle = Vector3.Lerp(path[0], path[2], 0.5f);
+
+            path[1] = tangent * offset + middle;
+
+            Sequence seq = DOTween.Sequence();
+            seq.Append(rt.DOPath(path, flyDuration, pathType: PathType.CatmullRom).SetEase(Ease.InSine));
+            seq.Join(rt.DOScale(0, flyDuration * 1f).SetEase(Ease.InBack, scaleOvershoot));
+            seq.OnComplete(() => Destroy(rt.gameObject));
+
+            return seq;
         }
     }
 }
