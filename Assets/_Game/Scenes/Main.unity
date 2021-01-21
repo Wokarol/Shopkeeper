@@ -2507,11 +2507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderCard: {fileID: 6107562813051249225, guid: d49c0b17ddb543b40a3aedc8e64d13c9, type: 3}
-  orders:
-  - {fileID: 11400000, guid: ccf04cb8f8b7ecc4dbf409f698c63879, type: 2}
-  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
-  - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
-  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
+  orders: []
   paddingRight: 5
   paddingTop: 5
   spacing: 260

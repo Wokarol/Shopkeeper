@@ -1752,6 +1752,7 @@ MonoBehaviour:
   display: {fileID: 340381678}
   fillSlider: {fileID: 372997382}
   craftingMaterialsToGet: {fileID: 11400000, guid: 6b641383df833984697f326fb8cca1c6, type: 2}
+  lootTable: {fileID: 11400000, guid: 4a99a8b77cecee94d9d31af0e1765dd5, type: 2}
   goldCount: {fileID: 1317911158}
   goldCountIcon: {fileID: 596602451}
   mainButton: {fileID: 724697916}
