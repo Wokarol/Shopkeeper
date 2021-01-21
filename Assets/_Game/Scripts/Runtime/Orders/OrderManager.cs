@@ -4,12 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Random = UnityEngine.Random;
+
 namespace Shopkeeper
 {
     public class OrderManager : MonoBehaviour
     {
         [SerializeField] private OrderCardUI orderCard = null;
-        [SerializeField] private List<Order> orders;            // Probably will be removed, used for testing for now
         [Space]
         [SerializeField] float paddingRight = 5;
         [SerializeField] float paddingTop = 5;
@@ -23,16 +24,37 @@ namespace Shopkeeper
         [SerializeField] Ease flyOutEase = Ease.InBack;
         [SerializeField] float cardMovementInterval = 0.05f;
         [SerializeField] float cardMoveUpDuration = 0.3f;
+        [Header("Orders")]
+        [SerializeField] private int ordersAtTheStart;
+        [SerializeField] private int maxOrderCount;
+        [SerializeField] private Vector2 orderAddIntervalMinMax;
+        [SerializeField] private Vector2 startDelayMinMax;
+        [SerializeField] private List<Order> orderPool;
 
         private List<OrderCardUI> createdOrders = new List<OrderCardUI>();
 
         private IEnumerator Start()
         {
-            foreach (var order in orders)
+            for (int i = 0; i < ordersAtTheStart; i++)
             {
                 yield return new WaitForSeconds(0.25f);
-                SpawnOrder(order);
+                SpawnOrder(GetRandomOrder());
             }
+
+            yield return new WaitForSeconds(Random.Range(startDelayMinMax.x, startDelayMinMax.y));
+
+            while (true)
+            {
+                yield return new WaitUntil(() => createdOrders.Count < maxOrderCount);
+                yield return new WaitForSeconds(Random.Range(orderAddIntervalMinMax.x, orderAddIntervalMinMax.y));
+                SpawnOrder(GetRandomOrder());
+            }
+        }
+
+        private Order GetRandomOrder()
+        {
+            int index = Random.Range(0, orderPool.Count);
+            return orderPool[index];
         }
 
         private void SpawnOrder(Order order)

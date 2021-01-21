@@ -2507,7 +2507,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderCard: {fileID: 6107562813051249225, guid: d49c0b17ddb543b40a3aedc8e64d13c9, type: 3}
-  orders:
+  paddingRight: 5
+  paddingTop: 5
+  spacing: 260
+  flyInDistance: 500
+  flyInDuration: 0.5
+  flyInEase: 27
+  flyOutDuration: 0.15
+  flyOutEase: 8
+  cardMovementInterval: 0.05
+  cardMoveUpDuration: 0.2
+  ordersAtTheStart: 2
+  maxOrderCount: 4
+  orderAddIntervalMinMax: {x: 2, y: 4}
+  startDelayMinMax: {x: 8, y: 13}
+  orderPool:
+  - {fileID: 11400000, guid: 7e1f151288747f04bafc4d344d557dd8, type: 2}
   - {fileID: 11400000, guid: 699c48d75868bc444961d2bab84d2aba, type: 2}
   - {fileID: 11400000, guid: 92a5e2f332aa6d54780efa91086fbede, type: 2}
   - {fileID: 11400000, guid: 0900527c0b82040498c29963ace30049, type: 2}
@@ -2526,17 +2541,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd358ac2454682e45992a1e63b3b6b77, type: 2}
   - {fileID: 11400000, guid: e556d1a595d520e418b3fd6f1bfe4b02, type: 2}
   - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
-  - {fileID: 11400000, guid: 7e1f151288747f04bafc4d344d557dd8, type: 2}
-  paddingRight: 5
-  paddingTop: 5
-  spacing: 260
-  flyInDistance: 500
-  flyInDuration: 0.5
-  flyInEase: 27
-  flyOutDuration: 0.15
-  flyOutEase: 8
-  cardMovementInterval: 0.05
-  cardMoveUpDuration: 0.2
 --- !u!1 &1741679637
 GameObject:
   m_ObjectHideFlags: 0
