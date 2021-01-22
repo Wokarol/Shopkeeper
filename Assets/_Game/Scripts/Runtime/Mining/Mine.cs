@@ -33,6 +33,8 @@ namespace Shopkeeper.Mining
         [SerializeField, TextArea(1, 3)] private string goDeeperMessage;
         [Header("Balancing")]
         [SerializeField] private int mineCost = 50;
+        [SerializeField] private Vector2Int mineAmountMinMax = new Vector2Int(4, 20);
+        [Header("Animatin")]
         [SerializeField] private float flyDuration;
         [SerializeField] private float scaleOvershoot;
         [SerializeField] private Vector2 curveOffsetMinMax = new Vector2(0, 0);
@@ -125,7 +127,7 @@ namespace Shopkeeper.Mining
             {
                 mainButtonLabel.text = goDeeperMessage;
 
-                MineResources(5, 11);
+                MineResources(mineAmountMinMax.x, mineAmountMinMax.y);
 
                 if (currentYield.CountAll() > 50)
                 {

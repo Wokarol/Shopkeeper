@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 7419155637730730125}
   spacing: 7.5
+  animation: 1
   count: {fileID: 7419155638938061930}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   emptyMaterial: {fileID: 2100000, guid: 48fc392d554d0cb4381e3f5d3a324eed, type: 2}
