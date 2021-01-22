@@ -540,7 +540,7 @@ MonoBehaviour:
   happinessLabel: {fileID: 1212691712}
   happinessIcon: {fileID: 0}
   animateNumberShow: 1
-  numberIncreaseSpeed: 100
+  numberIncreaseSpeed: 500
 --- !u!1 &682196216
 GameObject:
   m_ObjectHideFlags: 0
