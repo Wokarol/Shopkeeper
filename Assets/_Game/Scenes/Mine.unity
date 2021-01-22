@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: leave the mine
+  m_text: next day
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d6ec905446e1ecb4ca7e8d7940ec7064, type: 2}
@@ -1763,7 +1763,7 @@ MonoBehaviour:
 
     <size=50%>{0} coins'
   goDeeperMessage: Go deeper!
-  mineCost: 50
+  mineCost: 100
   flyDuration: 0.75
   scaleOvershoot: 8
   curveOffsetMinMax: {x: 20, y: 50}
