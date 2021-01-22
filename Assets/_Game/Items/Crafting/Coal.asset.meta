@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 guid: 9cfa675509c9a2944a728137b45a9104
 labels:
+- Crafting
 - Item
 NativeFormatImporter:
   externalObjects: {}

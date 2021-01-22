@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01a2802cb6bcf64181aa63ecbc7311d, type: 3}
+  m_Name: Shiny
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: df2270477a0ca1242b93b60c289d8b76, type: 2}
+  - {fileID: 11400000, guid: 2619da8507cfb714a9b35370852270c7, type: 2}
+  - {fileID: 11400000, guid: 66201742ce49e834486f2e791d42a900, type: 2}
+  - {fileID: 11400000, guid: 8749b74e1adfe54439af66e6d49d2485, type: 2}
+  - {fileID: 11400000, guid: e15125c2f613ad84d97f87c580d652ea, type: 2}
+  - {fileID: 11400000, guid: bae446a96bba9a74e91bb687255e4027, type: 2}
+  - {fileID: 11400000, guid: 9ffca626e1f186e4285295e5153d04e8, type: 2}
+  - {fileID: 11400000, guid: e0bbfa97d20276b4bab5f57cae3bc08a, type: 2}
+  - {fileID: 11400000, guid: 486852356eea06a4ea9e18b12217bf27, type: 2}
+  - {fileID: 11400000, guid: 92a2713f88fccd244a1cc43bd9fe383f, type: 2}
+  - {fileID: 11400000, guid: f985054ad3e73804781c0745ff6c5726, type: 2}

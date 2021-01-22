@@ -29,7 +29,17 @@ namespace Shopkeeper.Crafting
             addButton.TryGetComponent(out buttonCanvasGroup);
 
             materials = WorldContext.PlayerState.CraftingMaterials;
-            materials.Changed += (i, c) => UpdateButtonState();
+            materials.Changed += OnMaterialsChanged;
+            UpdateButtonState();
+        }
+
+        private void OnDestroy()
+        {
+            materials.Changed -= OnMaterialsChanged;
+        }
+
+        private void OnMaterialsChanged(Item i, int id)
+        {
             UpdateButtonState();
         }
 

@@ -11,18 +11,22 @@ namespace Shopkeeper.Crafting
         [Space]
         [SerializeField] ItemGroup itemsToShow = null;
 
-        CraftingMaterials materials;
+        public CraftingMaterials Materials { get; set; }
 
         Dictionary<Item, ListedItem> listedItemsByItem = new Dictionary<Item, ListedItem>();
 
         private void Start()
         {
-            materials = WorldContext.PlayerState.CraftingMaterials;
+            if(Materials == null)
+                Materials = WorldContext.PlayerState.CraftingMaterials;
 
-            foreach (var item in itemsToShow.Items)
+            if(Materials.IsEmpty)
             {
-                materials.Add(item);
-                materials[item] = 10;
+                foreach (var item in itemsToShow.Items)
+                {
+                    Materials.Add(item);
+                    Materials[item] = 30;
+                }
             }
 
             IReadOnlyList<Item> items = itemsToShow.Items;
@@ -32,10 +36,15 @@ namespace Shopkeeper.Crafting
             {
                 Item item = itemsToShow.Items[i];
                 listedItemsByItem.Add(item, this[i]);
-                this[i].Set(new VisibleItemStack(item, materials[item]), false);
+                this[i].Set(new VisibleItemStack(item, Materials[item]), false);
             }
 
-            materials.Changed += UpdateItemCount;
+            Materials.Changed += UpdateItemCount;
+        }
+
+        private void OnDestroy()
+        {
+            Materials.Changed -= UpdateItemCount;
         }
 
         private void UpdateItemCount(Item item, int amount)

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3421276cbd08cf342bd3bde5a11ca79a, type: 3}
   m_Name: War
   m_EditorClassIdentifier: 
-  description: I will go to war, I need 2 Bronze Flails, 5 Apples and any 4 Axes
-    you have!
+  description: I will be going for a war, I need <style=d>diamond sword</style>,
+    <style=any>bow</style> and <style=any>3 arrows</style>
   items:
   - id: 0
   - id: 1
@@ -23,15 +23,15 @@ MonoBehaviour:
     00000000:
       type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
       data:
-        Item: {fileID: 11400000, guid: be6aa1b32ba6921438c91d8a08564328, type: 2}
-        Amount: 2
+        Item: {fileID: 11400000, guid: 92a2713f88fccd244a1cc43bd9fe383f, type: 2}
+        Amount: 1
     00000001:
       type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
       data:
-        Item: {fileID: 11400000, guid: c6f3bd1b78aa0414992cd667fded1eef, type: 2}
-        Amount: 5
+        Item: {fileID: 11400000, guid: 0fd65c9f6d75f1b4b8708a004f478ade, type: 2}
+        Amount: 1
     00000002:
-      type: {class: GroupOfItems, ns: Shopkeeper, asm: Shopkeeper.Runtime}
+      type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
       data:
-        Group: {fileID: 11400000, guid: 3e7f52a64319ed94f8fabe7170a89d2b, type: 2}
-        Amount: 4
+        Item: {fileID: 11400000, guid: 5a11b41442f72ad4887c04aeb4f7afba, type: 2}
+        Amount: 3

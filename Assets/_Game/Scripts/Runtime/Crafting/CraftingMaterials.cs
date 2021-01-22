@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Shopkeeper.Crafting
 {
@@ -9,6 +10,7 @@ namespace Shopkeeper.Crafting
 
         public event Action<Item, int> Changed;
         public IEnumerable<KeyValuePair<Item, int>> AllValues => materials;
+        public bool IsEmpty => materials.Count == 0;
 
         public int this[Item item]
         {
@@ -38,6 +40,20 @@ namespace Shopkeeper.Crafting
             Changed?.Invoke(item, 0);
         }
 
+        internal void Add(CraftingMaterials materialsToAdd)
+        {
+            List<Item> items = materialsToAdd.materials.Keys.ToList();
+            foreach (var item in items)
+            {
+                this[item] += materialsToAdd[item];
+            }
+        }
+
+        public int CountAll()
+        {
+            return materials.Values.Sum();
+        }
+
         internal bool Contains(IReadOnlyList<CraftingIngredient> ingredients)
         {
             foreach (var ingredient in ingredients)
@@ -56,6 +72,15 @@ namespace Shopkeeper.Crafting
             foreach (var ingredient in ingredients)
             {
                 this[ingredient.Item] -= ingredient.Amount;
+            }
+        }
+
+        public void ZeroOut()
+        {
+            List<Item> items = materials.Keys.ToList();
+            foreach (var item in items)
+            {
+                this[item] = 0;
             }
         }
     }

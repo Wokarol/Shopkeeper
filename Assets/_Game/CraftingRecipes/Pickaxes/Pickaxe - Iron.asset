@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392fbcc686a3ce54ab3f7eba16f1a5ca, type: 3}
+  m_Name: Pickaxe - Iron
+  m_EditorClassIdentifier: 
+  ingredients:
+  - Item: {fileID: 11400000, guid: 9cfa675509c9a2944a728137b45a9104, type: 2}
+    Amount: 2
+  - Item: {fileID: 11400000, guid: f6bced804b1d54b4e8e016905d841494, type: 2}
+    Amount: 3
+  - Item: {fileID: 11400000, guid: aadcdef0bff7a1e4480c3eafe7340706, type: 2}
+    Amount: 1
+  result: {fileID: 11400000, guid: 2c9c8d6fbee4fc94a9b0a1bee55a00a1, type: 2}
