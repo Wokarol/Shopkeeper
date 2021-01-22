@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 100281273}
-  timePerDay: 30
+  timePerDay: 120
 --- !u!1 &1041515570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,11 +2507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderCard: {fileID: 6107562813051249225, guid: d49c0b17ddb543b40a3aedc8e64d13c9, type: 3}
-  orders:
-  - {fileID: 11400000, guid: ccf04cb8f8b7ecc4dbf409f698c63879, type: 2}
-  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
-  - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
-  - {fileID: 11400000, guid: 8a65f8415f958514b95ab3acf8a73e3a, type: 2}
   paddingRight: 5
   paddingTop: 5
   spacing: 260
@@ -2522,6 +2517,30 @@ MonoBehaviour:
   flyOutEase: 8
   cardMovementInterval: 0.05
   cardMoveUpDuration: 0.2
+  ordersAtTheStart: 2
+  maxOrderCount: 4
+  orderAddIntervalMinMax: {x: 2, y: 4}
+  startDelayMinMax: {x: 8, y: 13}
+  orderPool:
+  - {fileID: 11400000, guid: 7e1f151288747f04bafc4d344d557dd8, type: 2}
+  - {fileID: 11400000, guid: 699c48d75868bc444961d2bab84d2aba, type: 2}
+  - {fileID: 11400000, guid: 92a5e2f332aa6d54780efa91086fbede, type: 2}
+  - {fileID: 11400000, guid: 0900527c0b82040498c29963ace30049, type: 2}
+  - {fileID: 11400000, guid: 3cfa2b1f4ab48ee47a56731b405c86e0, type: 2}
+  - {fileID: 11400000, guid: 8b78a91e9ede37845a9b9a5348980121, type: 2}
+  - {fileID: 11400000, guid: 633cc3c48fc379c41b2522b3ccd45dd3, type: 2}
+  - {fileID: 11400000, guid: 750aa05096d52f44eb4566b6e17e88d6, type: 2}
+  - {fileID: 11400000, guid: c22ee046547a3024c844682b378568d4, type: 2}
+  - {fileID: 11400000, guid: 08870ffff4b2d6a4796131106741696b, type: 2}
+  - {fileID: 11400000, guid: a66cc29bd1fe9f84b83c0c8f7875d468, type: 2}
+  - {fileID: 11400000, guid: 39b47d92450dfc24d82cd6d40a129a7f, type: 2}
+  - {fileID: 11400000, guid: b4a2bdd63f1c46e4ea357f6862b2236b, type: 2}
+  - {fileID: 11400000, guid: cc871aa376b80f34686dab2b449f5abd, type: 2}
+  - {fileID: 11400000, guid: 9c38dfda0afb02b429bbe7d098288a7f, type: 2}
+  - {fileID: 11400000, guid: 65d62b2ed008d8f43a4af71ac1eb28ec, type: 2}
+  - {fileID: 11400000, guid: bd358ac2454682e45992a1e63b3b6b77, type: 2}
+  - {fileID: 11400000, guid: e556d1a595d520e418b3fd6f1bfe4b02, type: 2}
+  - {fileID: 11400000, guid: bbbfc177d42b82c429c5c7d2c593e01d, type: 2}
 --- !u!1 &1741679637
 GameObject:
   m_ObjectHideFlags: 0

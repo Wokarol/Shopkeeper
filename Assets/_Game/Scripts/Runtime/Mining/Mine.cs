@@ -19,6 +19,8 @@ namespace Shopkeeper.Mining
         [SerializeField] private FillAmountSlider fillSlider;
         [SerializeField] private ItemGroup craftingMaterialsToGet;
         [Space]
+        [SerializeField] private ItemGroup lootTable;
+        [Space]
         [SerializeField] private RectTransform goldCount;
         [SerializeField] private Image goldCountIcon;
         [Space]
@@ -154,8 +156,8 @@ namespace Shopkeeper.Mining
             int resourcesGot = Random.Range(min, max);
             for (int i = 0; i < resourcesGot; i++)
             {
-                int randomIndex = Random.Range(0, craftingMaterialsToGet.Items.Count);
-                Item itemToAdd = craftingMaterialsToGet.Items[randomIndex];
+                int randomIndex = Random.Range(0, lootTable.Items.Count);
+                Item itemToAdd = lootTable.Items[randomIndex];
                 currentYield[itemToAdd] += 1;
             }
         }

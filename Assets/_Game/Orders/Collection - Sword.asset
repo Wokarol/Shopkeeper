@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3421276cbd08cf342bd3bde5a11ca79a, type: 3}
-  m_Name: AnyAxe
+  m_Name: Collection - Sword
   m_EditorClassIdentifier: 
-  description: I need <color=#44768A>any</color> axe you have!
+  description: I just need <style=g>gold sword</style> for my collection
   items:
   - id: 0
   references:
     version: 1
     00000000:
-      type: {class: GroupOfItems, ns: Shopkeeper, asm: Shopkeeper.Runtime}
+      type: {class: ExactItem, ns: Shopkeeper, asm: Shopkeeper.Runtime}
       data:
-        Group: {fileID: 11400000, guid: 3e7f52a64319ed94f8fabe7170a89d2b, type: 2}
+        Item: {fileID: 11400000, guid: f985054ad3e73804781c0745ff6c5726, type: 2}
         Amount: 1

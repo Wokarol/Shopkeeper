@@ -25,7 +25,7 @@ namespace Shopkeeper.Crafting
                 foreach (var item in itemsToShow.Items)
                 {
                     Materials.Add(item);
-                    Materials[item] = 10;
+                    Materials[item] = 30;
                 }
             }
 
