@@ -10,7 +10,7 @@ namespace Shopkeeper
     {
         public void StartGame()
         {
-            WorldContext.GameState.StartDay();
+            WorldContext.GameState.StartGame();
         }
     }
 }

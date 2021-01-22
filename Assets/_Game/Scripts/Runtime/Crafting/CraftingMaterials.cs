@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,8 @@ namespace Shopkeeper.Crafting
 
         public event Action<Item, int> Changed;
         public IEnumerable<KeyValuePair<Item, int>> AllValues => materials;
+
+        [JsonIgnore]
         public bool IsEmpty => materials.Count == 0;
 
         public int this[Item item]
