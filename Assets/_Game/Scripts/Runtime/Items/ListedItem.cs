@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace Shopkeeper
         [SerializeField] private Material emptyMaterial = null;
         [SerializeField] private Color emptyColor = Color.black;
 
+        int lastAmount = -1;
 
         public VisibleItemStack Stack { get; private set; }
 
@@ -48,6 +50,25 @@ namespace Shopkeeper
         {
             Stack = stack;
             count.text = stack.Amount.ToString();
+
+            if(lastAmount < stack.Amount && lastAmount != -1)
+            {
+                transform.DOKill(true);
+                Sequence seq = DOTween.Sequence();
+                seq.SetTarget(transform);
+                seq.Append(transform.DOScale(new Vector3(1.4f, 0.6f), 0.1f));
+                seq.Append(transform.DOScale(new Vector3(0.75f, 1.2f), 0.1f));
+                seq.Append(transform.DOScale(new Vector3(1.0f, 1.0f), 0.1f));
+            }
+            else if (lastAmount > stack.Amount && lastAmount != -1)
+            {
+                transform.DOKill(true);
+                Sequence seq = DOTween.Sequence();
+                seq.SetTarget(transform);
+                seq.Append(transform.DOBlendableMoveBy(Vector3.down * 10, 0.2f));
+                seq.Append(transform.DOBlendableMoveBy(Vector3.down * -10, 0.1f));
+            }
+            lastAmount = stack.Amount;
 
             if (stack.Amount == 0)
             {
